@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+
+    <!-- font Awosome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="bg-white h-screen">
+
+        <!-- navbar -->
+        <nav
+            class="relative h-screen bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button" command="--toggle" commandfor="mobile-menu"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex shrink-0 items-center">
+                            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                                alt="Your Company" class="h-8 w-auto" />
+                        </div>
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                                <a href="#" aria-current="page"
+                                    class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
+                                <a href="#"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-3 gap-4">
+                        <a href="./register.html"> <button type="button"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register</button>
+                        </a>
+                        <a href="./login.html"> <button type="button"
+                                class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">login</button>
+                        </a>
+
+                    </div>
+
+                    <!-- Profile dropdown -->
+                    <el-dropdown class="relative ml-3">
+                        <button
+                            class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">Open user menu</span>
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt=""
+                                class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+                        </button>
+                </div>
+            </div>
+
+
+
+            <!-- banner -->
+            <div class="md:grid-cols-2 grid grid-cols-1 gap-2 px-10 py-10 h-120">
+                <div class="flex justify-center item-center pt-20">
+                    <div>
+                        <h1 id="welcomeUser" class="text-2xl font-extrabold pb-2"></h1>
+                        <h3>Secure, Fast, and Reliable Banking at Your Fingertips.</h3>
+                        <div class="flex justify-between item-center pt-10 gap-6">
+                            <button type="button" onclick="deposit()"
+                                class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  dark:focus:ring-[#FF9119]/40 me-2 mb-2">
+                                <i class="fa-solid fa-piggy-bank pr-7"></i> Deposit
+                            </button>
+                            <button type="button" onclick="withdraw()"
+                                class="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  dark:focus:ring-[#FF9119]/40 me-2 mb-2">
+                                <i class="fa-solid fa-money-bill-transfer pr-7"></i>Withdraw
+                            </button>
+                            <button onclick="balance()" type="button"
+                                class="text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  dark:focus:ring-[#FF9119]/40 me-2 mb-2">
+                                <i class="fa-solid fa-magnifying-glass-dollar pr-7"></i>Balance
+                            </button>
+                        </div>
+<div id="statusList" class="mt-10 text-xl font-bold bg-gradient-to-r to-emerald-100 from-sky-100 p-5 pt-10  h-60 rounded-2xl border-blue-50 shadow-2xl border-2">
+                            
+
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div>
+
+                    <div data-aos="fade-left"></div>
+                    <div id="contentdiv" class="max-w-2xl border-blue-500 border-5 p-4 bg-gray-100 rounded-2xl shadow-lg">
+                        <video class="w-full h-auto rounded-xl" autoplay muted loop>
+                            <source src="./paymentVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+    
+    </nav>
+
+    </div>
+
+
+    <script>
+        currentuser = localStorage.getItem("username");
+        welcomeUser.innerHTML = `Welcome ${currentuser}`;
+        console.log("successfull");
+
+        function deposit()
+        {
+             contentdiv.innerHTML = `
+
+<div class="max-w-md mx-auto bg-white border border-gray-200 rounded-lg md:h-89   p-6">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+     Deposit Form
+  </h2>
+
+  <form id="depositForm">
+    <!-- Username (Optional if you want user to enter it) -->
+    <div class="mb-4">
+      <label for="depositpassword" class="block text-sm font-medium text-gray-700">Password</label>
+      <input type="text" id="depositpassword" name="depositpassword" placeholder="Enter your Password"
+        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500 p-2.5" required>
+    </div>
+
+    <!-- Deposit Amount -->
+    <div class="mb-4">
+      <label for="depositAmount" class="block text-sm font-medium text-gray-700">Deposit Amount</label>
+      <input type="number" id="depositAmount" name="depositAmount" placeholder="Enter amount" min="1"
+        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500 p-2.5" required>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-center">
+      <button onclick="caldeposit()" type="button"
+        class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
+        <i class="fa-solid fa-piggy-bank pr-7"></i> Submit Deposit
+      </button>
+    </div>
+  </form>
+</div>
+
+`
+        }
+  function caldeposit() {
+    let calpass = depositpassword.value;
+    let calamount = parseFloat(depositAmount.value);
+
+    console.log(calpass, calamount);
+
+    // Validate amount
+    if (isNaN(calamount) || calamount <= 0) {
+        alert("Please enter a valid amount");
+        return;
+    }
+
+    // Check user exists in localStorage
+    let userData = JSON.parse(localStorage.getItem(calpass));
+
+    if (userData) {
+        console.log("Before Deposit:", userData);
+
+        // Initialize balance if missing
+        if (!userData.balance) {
+            userData.balance = 0;
+        }
+
+        // Add deposit
+        userData.balance += calamount;
+
+        // Save updated data
+        localStorage.setItem(calpass, JSON.stringify(userData));
+
+        console.log("After Deposit:", userData);
+        alert(`Deposit successful! New Balance: ${userData.balance}`);
+        statusList.innerHTML += `
+        <ul class="type-none text-center">
+        <li class=" items-center flex justify-center">
+            <svg class="w-10 h-10 me-2 text-green-500 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+            </svg>
+            
+        </li>
+        <li class="pt-5 items-center">Deposit Successful! </li>
+        <li class="pt-5items-center">New Balance: ${userData.balance}</li></ul>`
+        ;
+    } 
+    else {
+        alert("Incorrect Password");
+    }
+}
+
+
+        function withdraw(){
+
+       contentdiv.innerHTML=`<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg shadow-lg p-6">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+     Withdrawal Form
+  </h2>
+
+  <form id="withdrawForm">
+    <!-- Username -->
+    <div class="mb-4">
+      <label for="withdrawUsername" class="block text-sm font-medium text-gray-700">Username</label>
+      <input type="text" id="withdrawUsername" name="withdrawUsername" placeholder="Enter your username"
+        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-red-500 focus:border-red-500 p-2.5" required>
+    </div>
+
+    <!-- Withdrawal Amount -->
+    <div class="mb-4">
+      <label for="withdrawAmount" class="block text-sm font-medium text-gray-700">Withdrawal Amount</label>
+      <input type="number" id="withdrawAmount" name="withdrawAmount" placeholder="Enter amount" min="1"
+        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-red-500 focus:border-red-500 p-2.5" required>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex justify-center">
+      <button type="submit"
+        class="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
+        <i class="fa-solid fa-money-bill-transfer pr-7"></i> Submit Withdrawal
+      </button>
+    </div>
+  </form>
+</div>
+`}
+
+
+function balance()
+{
+    contentdiv.innerHTML=`<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg  p-6">
+  <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+    Check your Balance
+  </h2>
+
+  <form id="balanceForm">
+    <!-- Username -->
+    <div class="mb-4 mt-10">
+      <label for="balanceUsername" class="block text-sm font-medium text-gray-700">Password</label>
+      <input type="text" id="balancepass" name="balancepass" placeholder="Enter your password"
+        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500 p-2.5" required>
+    </div>
+
+    <!-- Button -->
+    <div class="flex justify-center">
+      <button type="submit"
+        class="text-white mt-10 bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
+        <i class="fa-solid fa-magnifying-glass-dollar pr-2"></i> Check Balance
+      </button>
+    </div>
+  </form>
+</div>
+`
+}
+
+    </script>
+
+</body>
+
+</html>

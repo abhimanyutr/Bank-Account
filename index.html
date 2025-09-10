@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <div class="bg-gray-300 h-screen">
+
+    <!-- navbar -->
+     <nav class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+            <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+          </div>
+          
+        </div>
+      </div>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-3 gap-4">
+        <a href="./register.html">       <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register</button>
+ </a>
+        <a href="./login.html">      <button type="button" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">login</button>
+ </a>
+
+    </div>
+
+        <!-- Profile dropdown -->
+        <el-dropdown class="relative ml-3">
+          <button class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">Open user menu</span>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+          </button>
+      </div>
+    </div>
+
+
+
+    <!-- banner -->
+     <div class="md:grid-cols-2 grid grid-cols-1 gap-2 px-10 py-10 h-120">
+        <div class="flex justify-center item-center pt-20"> <div >
+           <h1 class="text-2xl font-extrabold pb-2">Welcome to MyBank -<span class="font-bold">Your Trusted Digital Banking Partner</span></h1>
+           <h3>Secure, Fast, and Reliable Banking at Your Fingertips.</h3>
+
+             <div class="flex flex-col sm:flex-row gap-4 pt-10">
+      <a href="./login.html" 
+         class="md:px-6 px-3 py-2 bg-lime-600 hover:bg-lime-500 rounded-lg text-base font-semibold shadow-lg">
+      Open Account
+      </a>
+      
+    </div>
+        </div></div>
+       
+        <div>
+            
+<div data-aos="fade-left"></div>
+            <div class="max-w-2xl mx-auto p-4 bg-gray-100 rounded-2xl shadow-lg">
+  <video class="w-full h-auto rounded-xl"  autoplay muted loop>
+    <source src="./paymentVideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+        </div>
+       
+    </div>
+    
+  </div>
+</nav>
+
+  </div>  
+
+
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
