@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Banking</title>
 
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font Awosome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <div class="bg-gray-300 h-screen">
+  <div   class=" h-screen  bg-center bg-cover bg-no-repeat bg-fixed bg-[url('images/bankHome.jpg')] bg-gray-100 bg-blend-multiply">
 
     <!-- navbar -->
-     <nav class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+     <nav class=" relative bg-gray-800/30 md:h-screen sm:h-[280px] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -30,23 +34,25 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex shrink-0 items-center">
-          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
+          <img src="https://cdn-icons-png.flaticon.com/512/9811/9811843.png" alt="Your Company" class="h-8 w-auto" />
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
             <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
-            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Home</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">About</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">services</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Contact</a>
+
           </div>
           
         </div>
       </div>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-3 gap-4">
-        <a href="./register.html">       <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register</button>
+        <a href="./register.html">       <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> <i class="fa-solid fa-user-plus pr-8"></i>Open Account</button>
  </a>
-        <a href="./login.html">      <button type="button" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">login</button>
+        <a href="./login.html">      <button type="button" class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center bg-white/10 backdrop-blur-sm dark:hover:bg-white/20 dark:focus:ring-blue-800"> <i class="fa-solid fa-right-to-bracket pr-8"></i>login</button>
  </a>
 
     </div>
@@ -56,7 +62,7 @@
           <button class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
             <span class="absolute -inset-1.5"></span>
             <span class="sr-only">Open user menu</span>
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+            <img class="w-9" src="https://cdn-icons-png.freepik.com/512/3135/3135715.png" />
           </button>
       </div>
     </div>
@@ -66,35 +72,670 @@
     <!-- banner -->
      <div class="md:grid-cols-2 grid grid-cols-1 gap-2 px-10 py-10 h-120">
         <div class="flex justify-center item-center pt-20"> <div >
-           <h1 class="text-2xl font-extrabold pb-2">Welcome to MyBank -<span class="font-bold">Your Trusted Digital Banking Partner</span></h1>
-           <h3>Secure, Fast, and Reliable Banking at Your Fingertips.</h3>
+          <h1 class="text-7xl font-extrabold text-gray-50 pb-7">BankEase</h1>
+           <h1 class="text-2xl font-extrabold pb-2 text-gray-100">Easy Banking for Every Generation -<span class="font-bold">Your Trusted Digital Banking Partner</span></h1>
+           <h5 class="text-gray-100">Secure, Fast, and Reliable Banking at Your Fingertips.</h5>
 
-             <div class="flex flex-col sm:flex-row gap-4 pt-10">
-      <a href="./login.html" 
-         class="md:px-6 px-3 py-2 bg-lime-600 hover:bg-lime-500 rounded-lg text-base font-semibold shadow-lg">
-      Open Account
-      </a>
-      
-    </div>
-        </div></div>
-       
-        <div>
-            
-<div data-aos="fade-left"></div>
-            <div class="max-w-2xl mx-auto p-4 bg-gray-100 rounded-2xl shadow-lg">
-  <video class="w-full h-auto rounded-xl"  autoplay muted loop>
-    <source src="./paymentVideo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+          <div class="flex w-full pt-10 gap-6">
+
+  <!-- Open Account Button -->
+  <a href="./login.html"
+     class="flex items-center justify-center md:px-4 px-4 py-3 bg-lime-600 hover:bg-lime-500 rounded-lg text-base font-semibold text-white shadow-lg transition duration-300">
+    <i class="fa-solid fa-user-plus pr-8"></i>
+    Open Account Today
+  </a>
+
+  <!-- Another Button -->
+  <a href="./login.html"
+     class="flex items-center justify-center md:px-4 px-4 py-3 shadow-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm hover:shadow-xl rounded-lg text-base font-semibold text-white shadow-lg transition duration-300">
+    <i class="fa-solid fa-right-to-bracket pr-8"></i>
+    Login to Banking
+  </a>
+
 </div>
-        </div>
+</div>
+      
+      
        
     </div>
     
+  
   </div>
+
+  <!-- uiverse Card -->
+   <div class="flex flex-col md:flex-row justify-center items-center gap-6 ">
+    <!-- Card 1 -->
+   <div class="e-card playing">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
+
+      <div class="infotop"><i class="fa-solid fa-clock"></i>
+ Branch Hours
+   
+  <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+  4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+  21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+  22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+  17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+  14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+  3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+  19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+  12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+  16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+  15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+  19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+   16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path><br>      
+
+<br>
+<p>Mon-Fri : 9AM - 5PM</p>
+<div class="name">Sat : 9AM - 1PM</div>
+  </div>
+</div>
+
+<!-- card 2 -->
+ <div class="e-card playing">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  
+
+      <div class="infotop"> <i class="fa-solid fa-paper-plane"></i>
+Instant Transfers
+    
+  <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+  4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+  21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+  22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+  17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+  14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+  3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+  19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+  12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+  16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+  15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+  19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+   16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path><br>      
+  
+<br>
+<div class="name">
+   <p class="text-white/80 mb-2">
+    Send money instantly to any account, anywhere in the world, without delays. 
+    Our secure system ensures your transfers are <strong>fast, reliable, and protected</strong>.
+  </p>
+  
+  </div>
+<!-- Data Content -->
+ 
+  </div>
+</div>
+
+<!-- card 3 -->
+ <div class="e-card playing">
+  <div class="image"></div>
+  
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+ 
+
+      <div class="infotop"><i class="fa-solid fa-phone"></i>
+  24/7 Support
+    
+  <path fill="currentColor" d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674
+  4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368
+  21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204
+  22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651
+  17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862ZM4.10784
+  14.7235V9.2763C4.10784 8.20928 4.6955 7.21559 5.64066 6.68166L10.4676 3.95848C10.9398 3.69152 11.4701
+  3.55804 11.9996 3.55804C12.5291 3.55804 13.0594 3.69152 13.5324 3.95848L18.3593 6.68166C19.3045 7.21476
+  19.8922 8.20928 19.8922 9.2763V9.75997C19.1426 9.60836 18.377 9.53091 17.6022 9.53091C14.7929 9.53091
+  12.1041 10.5501 10.0309 12.3999C8.36735 13.8847 7.21142 15.8012 6.68783 17.9081L5.63981 17.3165C4.69466
+  16.7834 4.10699 15.7897 4.10699 14.7235H4.10784ZM10.4676 20.0413L8.60933 18.9924C8.94996 17.0479 9.94402
+  15.2665 11.4515 13.921C13.1353 12.4181 15.3198 11.5908 17.6022 11.5908C18.3804 11.5908 19.1477 11.6864
+  19.8922 11.8742V14.7235C19.8922 15.2278 19.7589 15.7254 19.5119 16.1662C18.7615 15.3596 17.6806 14.8528
+   16.4783 14.8528C14.2136 14.8528 12.3781 16.6466 12.3781 18.8598C12.3781 19.3937 12.4861 19.9021 12.68
+   20.3676C11.9347 20.5316 11.1396 20.4203 10.4684 20.0413H10.4676Z"></path><br>      
+
+<br>
+<P>17-1800-BANKING</P>
+<div class="name">Always here to help</div>
+  </div>
+</div>
+ </div>
+ 
 </nav>
+ 
+<!-- after Uiverse -->
+<div class="flex flex-col  justify-center items-center px-6 md:px-20 text-center pt-20 bg-blue-400/10">
+  
+  <!-- Main Heading -->
+  <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+    BankEase Member Care
+  </h2>
+
+  <!-- Subheading -->
+  <h6 class="text-lg md:text-xl text-gray-600/80">
+    Discover competitive rates designed to help your money grow faster
+  </h6>
+
+</div>
+    <div class="flex  flex-col md:flex-row justify-center items-center gap-6 pt-10 bg-blue-400/10 px-10">
+
+       <!-- card1 -->
+
+
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-transparent dark:border-gray-100 transform transition-transform duration-300 hover:scale-105">
+  <div class="w-14 h-14 shadow-lg bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+    <i class="fa-solid fa-piggy-bank text-white text-2xl"></i>
+  </div>
+
+  <h5 class="mb-2 text-2xl font-extrabold tracking-tight text-center text-blue-500">3.75%</h5>
+  <p class="text-gray-500 text-center text-sm">APY*</p>
+  <p class="mb-3 text-gray-900 text-center font-extrabold uppercase">HIGH YIELD SAVINGS</p>
+  <p class="text-center text-gray-500">Earn More On Every Deposit.</p>
+
+  <div class="text-center mt-4">
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3.5 py-1 rounded-full dark:bg-blue-900 dark:text-blue-300">
+      <i class="fa-solid fa-star mr-1"></i> FEATURED
+    </span>
+  </div>
+</div>
+
+<!-- card2 -->
+
+
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-transparent dark:border-gray-100 transform transition-transform duration-300 hover:scale-105">
+  <div class="w-14 h-14 shadow-lg bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+    <i class="fa-solid fa-sun text-white text-2xl"></i>
+  </div>
+
+  <h5 class="mb-2 text-2xl font-extrabold tracking-tight text-center text-green-500">3.65%</h5>
+  <p class="text-gray-500 text-center text-sm">APY*</p>
+  <p class="mb-3 text-gray-900 text-center font-extrabold uppercase">18 MONTH CERTIFICATE</p>
+  <p class="text-center text-gray-500">BankEase Certificate Rates.</p>
+
+  <div class="text-center mt-4">
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3.5 py-1 rounded-full dark:bg-blue-900 dark:text-blue-300">
+      <i class="fa-solid fa-stamp mr-1"></i> SAVINGS
+    </span>
+  </div>
+</div>
+
+<!-- card3 -->
+
+
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-transparent dark:border-gray-100 transform transition-transform duration-300 hover:scale-105">
+  <div class="w-14 h-14 shadow-lg bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+    <i class="fa-solid fa-id-card text-white text-2xl"></i>
+  </div>
+
+  <h5 class="mb-2 text-2xl font-extrabold tracking-tight text-center text-purple-500">4.00%</h5>
+  <p class="text-gray-500 text-center text-sm">APY</p>
+  <p class="mb-3 text-gray-900 text-center font-extrabold uppercase">CREDIT CARDS</p>
+  <p class="text-center text-gray-500">BankEase Credit Card Rates.</p>
+
+  <div class="text-center mt-4">
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3.5 py-1 rounded-full dark:bg-blue-900 dark:text-blue-300">
+      <i class="fa-solid fa-id-card mr-1"></i> CREDIT
+    </span>
+  </div>
+</div>
+
+<!-- card4 -->
+
+
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-transparent dark:border-gray-100 transform transition-transform duration-300 hover:scale-105">
+  <div class="w-14 h-14 shadow-lg bg-amber-300 rounded-full flex items-center justify-center mx-auto mb-4">
+    <i class="fa-solid fa-handshake-angle text-white text-2xl"></i>
+  </div>
+
+  <h5 class="mb-2 text-2xl font-extrabold tracking-tight text-center text-amber-500">15.49%</h5>
+  <p class="text-gray-500 text-center text-sm">APY</p>
+  <p class="mb-3 text-gray-900 text-center font-extrabold uppercase">LOANS</p>
+  <p class="text-center text-gray-500">BankEase Standard Loan Rates.</p>
+
+  <div class="text-center mt-4">
+    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3.5 py-1 rounded-full dark:bg-blue-900 dark:text-blue-300">
+      <i class="fa-solid fa-percent mr-1"></i> MORTGAGE
+    </span>
+  </div>
+</div>
+
+ 
+
+</div>
+
+
+<!-- ToolTip -->
+ <div class="flex h-25 flex-col justify-center items-center px-6 md:px-20 text-center pt-5 bg-blue-400/10"><!-- From Uiverse.io by themrsami --> 
+<div class="relative inline-block group">
+  <button
+  class="relative px-7 py-2 w-64 text-sm font-semibold text-black shadow shadow-xl 
+         bg-transparent rounded-xl focus:outline-none focus:ring-2 
+         focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 
+         transition-all duration-300 overflow-hidden"
+>
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 
+           blur-xl transition-opacity"
+  ></div>
+
+  <span class="relative flex justify-center items-center gap-2">
+    <i class="fa-solid fa-exclamation"></i>
+    Annual Percentage Yield
+  </span>
+</button>
+
+
+  <div
+    class="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 transition-all duration-300 ease-out transform group-hover:translate-y-0 translate-y-2"
+  >
+    <div
+      class="relative p-4 bg-gradient-to-br from-gray-500/95 to-blue-500/100 backdrop-blur-md rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(79,70,229,0.15)]"
+    >
+      <div class="flex items-center gap-3 mb-2">
+        <div
+          class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-500/20"
+        >
+          <svg
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-4 h-4 text-indigo-400"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <h3 class="text-sm font-semibold text-white">Important Information</h3>
+      </div>
+
+      <div class="space-y-2">
+         <p class="text-sm text-gray-300 leading-relaxed max-w-md mx-auto">
+    *Annual Percentage Yield (APY). Rates are subject to change without prior notice. 
+    Terms and conditions apply. Interest may vary based on account type and balance.
+  </p>
+        <div class="flex items-center gap-2 text-xs text-gray-400">
+          <span class="relative flex justify-center items-center gap-2">
+      <i class="fa-solid fa-exclamation"></i>
+      View Rate Details
+    </span>
+        </div>
+      </div>
+
+      <div
+        class="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 blur-xl opacity-50"
+      ></div>
+
+      <div
+        class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-gradient-to-br from-gray-900/95 to-gray-800/95 rotate-45 border-r border-b border-white/10"
+      ></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- bestSection -->
+<div class="flex flex-col md:flex-row justify-between px-10 py-12 gap-8 items-center bg-blue-400/10">
+  <!-- Left: Image -->
+  <div class="flex-1">
+    <img src="https://windes.com/wp-content/uploads/2022/10/AdobeStock_273422105-scaled.jpeg" 
+         class="rounded-xl w-full h-full object-cover" 
+         alt="Banking Technology">
+  </div>
+
+  <!-- Right: Content -->
+  <div class="flex-1 flex flex-col justify-center gap-6">
+    <!-- Heading and Paragraph -->
+    <div class="flex flex-col gap-4">
+      <h1 class="text-3xl md:text-5xl font-bold text-center md:text-left bg-gradient-to-r from-blue-900 via-cyan-500 to-blue-600 text-transparent bg-clip-text">
+        Start Building Your Financial Strength
+      </h1>
+
+      <p class="text-gray-700 text-center md:text-left leading-relaxed">
+        Open a new account today and enjoy a <strong>$200 bonus</strong>! Take the first step toward achieving your financial goals. You can open your account online or visit any of our branches for a seamless experience. Our team is here to guide you every step of the way, ensuring your banking is simple and secure. Start building your financial future with confidence and convenience.
+      </p>
+    </div>
+
+    
+
+    <!-- Features -->
+    <div class="flex flex-col md:flex-row gap-6 mt-4 text-gray-800 font-medium text-center md:text-left">
+      <h6 class="bg-blue-100/50 px-4 py-2 rounded-xl"> <i class="fa-solid fa-check text-green-400 border border-green-400 rounded-2xl p-2 pr-5"></i>
+<b>No minimum balance required</b></h6>
+      <h6 class="bg-blue-100/50 px-4 py-2 rounded-xl"><i class="fa-solid fa-check text-green-400 border border-green-400 rounded-2xl p-2 pr-5"></i> <b> Free online and mobile banking</b> </h6>
+      <h6 class="bg-blue-100/50 px-4 py-2 rounded-xl"><i class="fa-solid fa-check text-green-400 border border-green-400 rounded-2xl p-2 pr-5"></i> <b> 24/7 Customer Support</b> </h6>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<div class="text-center bg-gradient-to-b from-blue-400/10 to-blue-400">
+
+  <div class="text-center py-8">
+  <h1 class="text-3xl font-bold text-gray-900 mb-2">
+    How Can We Help You Today?
+  </h1>
+  <h5 class="text-lg text-gray-500">
+    Comprehensive banking solutions tailored to your needs
+  </h5>
+</div>
+<div class="flex  flex-col md:flex-row justify-center items-center gap-6 pt-10 bg-blue-400/10 px-10">
+
+<!-- card1 -->
+<div class="max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-blue-500/200 transform transition-transform duration-300 hover:scale-105">
+  <div class="w-14 h-14 shadow-xl bg-cyan-200/50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+    <i class="fa-solid fa-building-columns text-white text-2xl"></i>
+  </div>
+    <a href="#">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Deposit Bank</h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-700 dark:text-white">Secure your money with our high-yield savings and checking accounts designed for growth</p>
+    
+</div>
+<!-- Card2 -->
+ <div class="max-w-sm p-6 bg-white  rounded-lg shadow-xl dark:bg-blue-500/200 transform transition-transform duration-300 hover:scale-105">
+  <div class="w-14 h-14 shadow-xl bg-cyan-200/50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+    <i class="fa-solid fa-id-card text-white text-2xl"></i>
+  </div>
+    <a href="#">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Credit Cards</h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-700 dark:text-white">Find the perfect credit card for your lifestyle and spending habits with competitive rates</p>
+    
+</div>
+
+<!-- card3 -->
+<div class="max-w-sm p-6 bg-white rounded-lg shadow-xl dark:bg-blue-500/200 transform transition-transform duration-300 hover:scale-105">
+  <div class="w-14 h-14 shadow-xl bg-cyan-200/50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+    <i class="fa-solid fa-share text-white text-2xl"></i>
+  </div>
+  <a href="#">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Instant Transfers</h5>
+  </a>
+  <p class="mb-3 font-normal text-gray-700 dark:text-white">
+    Send and receive funds instantly with secure, fast, and reliable transfers anytime, anywhere.
+  </p>
+</div>
+
+
+</div>
+</div>
+
+
+<!-- bestSection2 -->
+<div class="flex flex-col md:flex-row justify-between px-10 py-12 gap-8 items-center bg-gradient-to-b from-blue-400 to-blue-200/10">
+  
+
+  <!-- Right: Content -->
+  <div class="flex-1 flex flex-col justify-center gap-6">
+    <!-- Heading and Paragraph -->
+    <div class="flex flex-col gap-4">
+     <h1 class="text-3xl md:text-5xl font-bold text-center md:text-left bg-gradient-to-r from-cyan-900 via-cyan-700 to-cyan-900 text-shadow-white  text-transparent bg-clip-text">
+    Your Future, Our Priority
+</h1>
+
+<p class="text-gray-700 text-center md:text-left leading-relaxed">
+    BankEase offers innovative financial solutions designed to help you save, invest, and grow with confidence. Experience banking that’s secure, simple, and tailored to your needs.
+</p>
+
+    </div>
+
+    
+
+    <!-- Features -->
+   <div class="flex flex-col gap-6 mt-4 text-gray-800 font-medium text-center md:text-left">
+  <!-- Feature 1 -->
+  <div class="flex items-center gap-4">
+    <div class="w-13 h-13 shadow-xl bg-cyan-200 rounded-2xl flex items-center justify-center">
+      <i class="fa-solid fa-building-columns text-white text-2xl"></i>
+    </div>
+    <div> <span class="text-lg text-gray-600 font-extrabold">Competitive Rates </span>
+    <h5 class="text-gray-500 pl-1">Better reates on savings, loans, and credit cards,designed to maximize your financial growth</h5></div>
+   
+  </div>
+
+  <!-- Feature 2 -->
+  <div class="flex items-center gap-4">
+    <div class="w-13 h-13 shadow-xl bg-green-200 rounded-2xl flex items-center justify-center">
+      <i class="fa-solid fa-users text-white text-2xl"></i>
+    </div>
+    <div> <span class="text-lg text-gray-600 font-extrabold">Member-Focused</span>
+       <h5 class="text-gray-500 pl-1">We're owned by our members,not shareholders,your success is our priority</h5>
+    </div>
+   
+  </div>
+</div>
+
+  </div>
+
+  <!-- Left: Image -->
+  <div class="flex-1">
+    
+    <!-- imgage Grid -->
+     
+   <!-- From Uiverse.io by codebykay101 --> 
+<div class="container">
+  <div data-text="" style="--r:-15;" class="glass">
+    <img src="https://www.imoneypay.in/assets/images/phone-home.png" alt="">
+  </div>
+  <div data-text="" style="--r:5;" class="glass w-64 h-64 relative overflow-hidden rounded-xl">
+    <img src="https://protium.co.in/wp-content/uploads/2023/10/Future-Of-UPI-And-Digital-Payments.png" 
+         alt="" 
+         class="w-full h-full object-cover">
+  </div>
+  <div data-text="" style="--r:25;" class="glass">
+   <!-- From Uiverse.io by Praashoo7 --> 
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p class="heading_8264">MASTERCARD</p>
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0 0 48 48">
+            <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path><path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path><path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
+            </svg>
+            
+            <svg version="1.1" class="contactless" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 50 50" xml:space="preserve">  <image id="image0" width="50" height="50" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAQAAAC0NkA6AAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+              AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZ
+              cwAACxMAAAsTAQCanBgAAAAHdElNRQfnAg0IEzgIwaKTAAADDklEQVRYw+1XS0iUURQ+f5qPyjQf
+              lGRFEEFK76koKGxRbWyVVLSOgsCgwjZBJJYuKogSIoOonUK4q3U0WVBWFPZYiIE6kuArG3VGzK/F
+              fPeMM/MLt99/NuHdfPd888/57jn3nvsQWWj/VcMlvMMd5KRTogqx9iCdIjUUmcGR9ImUYowyP3xN
+              GQJoRLVaZ2DaZf8kyjEJALhI28ELioyiwC+Rc3QZwRYyO/DH51hQgWm6DMIh10KmD4u9O16K49it
+              VoPOAmcGAWWOepXIRScAoJZ2Frro8oN+EyTT6lWkkg6msZfMSR35QTJmjU0g15tIGSJ08ZZMJkJk
+              HpNZgSkyXosS13TkJpZ62mPIJvOSzC1bp8vRhhCakEk7G9/o4gmZdbpsTcKu0m63FbnBP9Qrc15z
+              bkbemfgNDtEOI8NO5L5O9VYyRYgmJayZ9nPaxZrSjW4+F6Uw9yQqIiIZwhp2huQTf6OIvCZyGM6g
+              DJBZbyXifJXr7FZjGXsdxADxI7HUJFB6iWvsIhFpkoiIiGTJfjJfiCuJg2ZEspq9EHGVpYgzKqwJ
+              qSAOEwuJQ/pxPvE3cYltJCLdxBLiSKKIE5HxJKcTRNeadxfhDiuYw44zVs1dxKwRk/uCxIiQkxKB
+              sSctRVAge9g1E15EHE6yRUaJecRxcWlukdRIbGFOSZCMWQA/iWauIP3slREHXPyliqBcrrD71Amz
+              Z+rD1Mt2Yr8TZc/UR4/YtFnbijnHi3UrN9vKQ9rPaJf867ZiaqDB+czeKYmd3pNa6fuI75MiC0uX
+              XSR5aEMf7s7a6r/PudVXkjFb/SsrCRfROk0Fx6+H1i9kkTGn/E1vEmt1m089fh+RKdQ5O+xNJPUi
+              cUIjO0Dm7HwvErEr0YxeibL1StSh37STafE4I7zcBdRq1DiOkdmlTJVnkQTBTS7X1FYyvfO4piaI
+              nKbDCDaT2anLudYXCRFsQBgAcIF2/Okwgvz5+Z4tsw118dzruvIvjhTB+HOuWy8UvovEH6beitBK
+              xDyxm9MmISKCWrzB7bSlaqGlsf0FC0gMjzTg6GgAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDIt
+              MTNUMDg6MTk6NTYrMDA6MDCjlq7LAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAyLTEzVDA4OjE5
+              OjU2KzAwOjAw0ssWdwAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyMy0wMi0xM1QwODoxOTo1Nisw
+              MDowMIXeN6gAAAAASUVORK5CYII="></image>
+            </svg>
+            <p class="number">XXXX XXXX 5269 6576</p>
+            <p class="valid_thru">VALID THRU</p>
+            <p class="date_8264">1 2 / 2 4</p>
+            <p class="name">XXXXXX XXXX</p>
+        </div>
+        
+    </div>
+</div>
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+
+ <!-- FOOTER -->
+   <div class="flex flex-col md:flex-row justify-center items-start gap-10 px-10 bg-gray-800">
+  <!-- Column 1 -->
+  <div class="flex-1 pt-8">
+  <h1 class="text-2xl font-extrabold text-gray-50 pb-3">BankEase</h1>
+  <p class="text-gray-300 leading-relaxed">
+    Your trusted partner for smarter, faster, and secure online banking.
+    Experience effortless deposits, quick withdrawals, and real-time transaction tracking —
+    all designed to keep you in control of your finances.
+  </p>
+
+  <h1 class="pt-10 font-bold text-gray-400">Connect with us:</h1>
+
+  <div class="flex items-center gap-6 mt-4">
+    <!-- Facebook -->
+    <a href="#" class="text-gray-400 hover:text-blue-600 transition">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+        viewBox="0 0 8 19">
+        <path fill-rule="evenodd"
+          d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+          clip-rule="evenodd" />
+      </svg>
+      <span class="sr-only">Facebook</span>
+    </a>
+
+    <!-- YouTube -->
+    <a href="#" class="text-gray-400 hover:text-red-600 transition">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+        viewBox="0 0 24 17">
+        <path
+          d="M23.498 2.515a3.002 3.002 0 0 0-2.113-2.123C19.382 0 12 0 12 0s-7.382 0-9.385.392A3.002 3.002 0 0 0 .502 2.515 31.31 31.31 0 0 0 0 8.5a31.31 31.31 0 0 0 .502 5.985 3.002 3.002 0 0 0 2.113 2.123C4.618 17 12 17 12 17s7.382 0 9.385-.392a3.002 3.002 0 0 0 2.113-2.123A31.31 31.31 0 0 0 24 8.5a31.31 31.31 0 0 0-.502-5.985ZM9.75 12.02V4.98L15.5 8.5l-5.75 3.52Z" />
+      </svg>
+      <span class="sr-only">YouTube</span>
+    </a>
+
+    <!-- Twitter -->
+    <a href="#" class="text-gray-400 hover:text-sky-500 transition">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+        viewBox="0 0 20 17">
+        <path fill-rule="evenodd"
+          d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+          clip-rule="evenodd" />
+      </svg>
+      <span class="sr-only">Twitter</span>
+    </a>
+
+    <!-- Dribbble -->
+    <a href="#" class="text-gray-400 hover:text-pink-500 transition">
+      <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+        viewBox="0 0 20 20">
+        <path fill-rule="evenodd"
+          d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+          clip-rule="evenodd" />
+      </svg>
+      <span class="sr-only">Dribbble</span>
+    </a>
+  </div>
+</div>
+
+
+  <!-- Column 2 -->
+  <div class="flex-[3] ">
+    <div class="mx-auto w-full max-w-screen-xl sm:pt-0 md:pt-6">
+      <div class="grid grid-cols-2 gap-8 px-4  md:grid-cols-4">
+        <div>
+  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">About BankEase</h2>
+  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Our Story</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Leadership Team</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">News &amp; Updates</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Careers</a>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
+  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Help Center</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">FAQs</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Contact Support</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Report an Issue</a>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Services</h2>
+  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Online Deposit</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Instant Withdrawals</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Transaction History</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Account Management</a>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal &amp; Policies</h2>
+  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Privacy Policy</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Security Policy</a>
+    </li>
+    <li class="mb-4">
+      <a href="#" class="hover:underline">Cookie Policy</a>
+    </li>
+  </ul>
+</div>
+            
+    </div>
+    
+  </div>
+
+</div>
+
+
 
   </div>  
+
+<div class="px-4 py-4 flex flex-col items-center justify-center  dark:border-gray-700 bg-gray-800">
+  <span class="text-sm text-gray-600 dark:text-gray-400 text-center">
+    © 2025 <a href="#" class="font-semibold text-blue-600 dark:text-blue-400 hover:underline">BankEase</a>. 
+    Empowering smarter, faster, and secure digital banking for everyone.
+  </span>
+  <span class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+    Designed by the BankEase| All rights reserved.
+  </span>
+</div>
 
 
 

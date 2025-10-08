@@ -104,19 +104,21 @@
                                 <i class="fa-solid fa-magnifying-glass-dollar pr-7"></i>Balance
                             </button>
                         </div>
-<div id="statusList" class="mt-10 text-xl font-bold bg-gradient-to-r to-emerald-100 from-sky-100 p-5 pt-10  h-60 rounded-2xl border-blue-50 shadow-2xl border-2">
-                            
+                        <div id="statusList"
+                            class="mt-10 text-xl font-bold bg-gradient-to-r to-emerald-100 from-sky-100 p-5 pt-10  h-60 rounded-2xl border-blue-50 shadow-2xl border-2">
+
 
 
                         </div>
-                        
+
                     </div>
                 </div>
 
                 <div>
 
                     <div data-aos="fade-left"></div>
-                    <div id="contentdiv" class="max-w-2xl border-blue-500 border-5 p-4 bg-gray-100 rounded-2xl shadow-lg">
+                    <div id="contentdiv"
+                        class="max-w-2xl border-blue-500 border-5 p-4 bg-gray-100 rounded-2xl shadow-lg">
                         <video class="w-full h-auto rounded-xl" autoplay muted loop>
                             <source src="./paymentVideo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
@@ -126,8 +128,8 @@
 
             </div>
 
-    
-    </nav>
+
+        </nav>
 
     </div>
 
@@ -137,9 +139,8 @@
         welcomeUser.innerHTML = `Welcome ${currentuser}`;
         console.log("successfull");
 
-        function deposit()
-        {
-             contentdiv.innerHTML = `
+        function deposit() {
+            contentdiv.innerHTML = `
 
 <div class="max-w-md mx-auto bg-white border border-gray-200 rounded-lg md:h-89   p-6">
   <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
@@ -173,38 +174,38 @@
 
 `
         }
-  function caldeposit() {
-    let calpass = depositpassword.value;
-    let calamount = parseFloat(depositAmount.value);
+        function caldeposit() {
+            let calpass = depositpassword.value;
+            let calamount = parseFloat(depositAmount.value);
 
-    console.log(calpass, calamount);
+            console.log(calpass, calamount);
 
-    // Validate amount
-    if (isNaN(calamount) || calamount <= 0) {
-        alert("Please enter a valid amount");
-        return;
-    }
+            // Validate amount
+            if (isNaN(calamount) || calamount <= 0) {
+                alert("Please enter a valid amount");
+                return;
+            }
 
-    // Check user exists in localStorage
-    let userData = JSON.parse(localStorage.getItem(calpass));
+            // Check user exists in localStorage
+            let userData = JSON.parse(localStorage.getItem(calpass));
 
-    if (userData) {
-        console.log("Before Deposit:", userData);
+            if (userData) {
+                console.log("Before Deposit:", userData);
 
-        // Initialize balance if missing
-        if (!userData.balance) {
-            userData.balance = 0;
-        }
+                // Initialize balance if missing
+                if (!userData.balance) {
+                    userData.balance = 0;
+                }
 
-        // Add deposit
-        userData.balance += calamount;
+                // Add deposit
+                userData.balance += calamount;
 
-        // Save updated data
-        localStorage.setItem(calpass, JSON.stringify(userData));
+                // Save updated data
+                localStorage.setItem(calpass, JSON.stringify(userData));
 
-        console.log("After Deposit:", userData);
-        alert(`Deposit successful! New Balance: ${userData.balance}`);
-        statusList.innerHTML += `
+                console.log("After Deposit:", userData);
+                alert(`Deposit successful! New Balance: ${userData.balance}`);
+                statusList.innerHTML += `
         <ul class="type-none text-center">
         <li class=" items-center flex justify-center">
             <svg class="w-10 h-10 me-2 text-green-500 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -214,17 +215,17 @@
         </li>
         <li class="pt-5 items-center">Deposit Successful! </li>
         <li class="pt-5items-center">New Balance: ${userData.balance}</li></ul>`
-        ;
-    } 
-    else {
-        alert("Incorrect Password");
-    }
-}
+                    ;
+            }
+            else {
+                alert("Incorrect Password");
+            }
+        }
 
 
-        function withdraw(){
+        function withdraw() {
 
-       contentdiv.innerHTML=`<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg shadow-lg p-6">
+            contentdiv.innerHTML = `<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg shadow-lg p-6">
   <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
      Withdrawal Form
   </h2>
@@ -246,7 +247,7 @@
 
     <!-- Buttons -->
     <div class="flex justify-center">
-      <button type="submit"
+      <button type="submit" onclick="calWithdraw()"
         class="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
         <i class="fa-solid fa-money-bill-transfer pr-7"></i> Submit Withdrawal
       </button>
@@ -254,11 +255,18 @@
   </form>
 </div>
 `}
-
-
-function balance()
+function calWithdraw()
 {
-    contentdiv.innerHTML=`<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg  p-6">
+    const username = withdrawUsername.value;
+    const amt = withdrawAmount.value;
+    console.log(username,amt);
+    
+
+}
+
+
+        function balance() {
+            contentdiv.innerHTML = `<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg  p-6">
   <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
     Check your Balance
   </h2>
@@ -281,7 +289,7 @@ function balance()
   </form>
 </div>
 `
-}
+        }
 
     </script>
 

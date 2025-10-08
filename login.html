@@ -3,12 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Digital Banking | Login</title>
+    <link rel="stylesheet" href="./style.css">
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+
+<div class="flex flex-col md:flex-row justify-center items-center gap-10 px-10 bg-gray-800 py-10">
+  <!-- Left -->
+  <div class="flex-1  flex-col items-center justify-center px-4 py-8 md:px-16 lg:px-32 text-center text-gray-300">
+
+  <!-- Heading Section -->
+  <div class="mb-8">
+    <h1 class="font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-4">Welcome Back</h1>
+    <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold mb-2">BankEase</h2>
+    <h3 class="text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
+      Swift and secure money transfers worldwide. Experience banking reimagined, with real-time tracking and seamless digital convenience.
+    </h3>
+  </div>
+
+  <!-- Features Card -->
+  <div class="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sm:p-8">
+
+    <!-- First row -->
+    <div class="flex flex-col sm:flex-row gap-4 mb-4">
+
+      
+      
+      <!-- Bank-Grade Security -->
+      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
+        <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full shadow-lg mr-4">
+          <img class="w-8 h-8 rounded-full" src="https://getdrawings.com/free-icon-bw/shield-icon-png-4.png" alt="Security">
+        </div>
+        <div class="text-left">
+          <div class="font-semibold text-lg">Bank-Grade Security</div>
+          <div class="text-xs text-gray-300">256-bit Encryption</div>
+        </div>
+      </a>
+
+      <!-- Instant Transfers -->
+      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
+        <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full shadow-lg mr-4">
+          <img class="w-8 h-8 rounded-full" src="https://www.pngall.com/wp-content/uploads/10/Charge-Silhouette-PNG-Image.png" alt="Transfers">
+        </div>
+        <div class="text-left">
+          <div class="font-semibold text-lg">Instant Transfers</div>
+          <div class="text-xs text-gray-300">Real-Time Processing</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Second row -->
+    <div class="flex flex-col sm:flex-row gap-4">
+      
+      <!-- 24/7 Support -->
+      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
+        <div class="w-12 h-12 flex items-center justify-center bg-transparent rounded-full shadow-lg mr-4">
+          <img class="w-8 h-8 rounded-full" src="https://cdn4.iconfinder.com/data/icons/essentials-71/24/023_-_Clock-512.png" alt="Support">
+        </div>
+        <div class="text-left">
+          <div class="font-semibold text-lg">24/7 Support</div>
+          <div class="text-xs text-gray-300">Always Here to Help</div>
+        </div>
+      </a>
+
+      <!-- Global Reach -->
+      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
+        <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full shadow-lg mr-4">
+          <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/309/309484.png" alt="Global">
+        </div>
+        <div class="text-left">
+          <div class="font-semibold text-lg">Global Reach</div>
+          <div class="text-xs text-gray-300">200+ Countries</div>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+  <!-- Right -->
+  <div class="flex flex-col items-center justify-center min-h-screen px-4 py-8">
+  
+  <!-- Login Card -->
+  <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-md">
+    
+    <!-- Title -->
+    <h2 class="text-2xl sm:text-3xl font-bold text-center text-blue-700 mb-6">🏦 Bank Account Login</h2>
+
+    <!-- Login Form -->
+    <form action="/login" method="POST" class="space-y-5">
+      
+      <!-- Name / Email -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your Name"
+          class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3 dark:bg-gray-700 dark:text-white" required>
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password"
+          class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3 dark:bg-gray-700 dark:text-white" required>
+      </div>
+
+      <!-- Remember Me + Forgot Password -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-sm">
+        <label class="flex items-center text-gray-600 dark:text-gray-300 mb-2 sm:mb-0">
+          <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500">
+          <span class="ml-2">Remember me</span>
+        </label>
+        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Forgot password?</a>
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white p-3 rounded-lg font-semibold shadow transition">
+        Login
+      </button>
+    </form>
+
+    <!-- Divider -->
+    <div class="flex items-center my-6">
+      <hr class="flex-grow border-gray-300 dark:border-gray-600">
+      <span class="mx-2 text-gray-400 dark:text-gray-400 text-sm">OR</span>
+      <hr class="flex-grow border-gray-300 dark:border-gray-600">
+    </div>
+
+    <!-- Sign Up Redirect -->
+    <p class="text-center text-sm text-gray-600 dark:text-gray-300">
+      Don’t have an account? 
+      <a href="./register.html" class="text-blue-600 dark:text-blue-400 font-medium hover:underline">Create one</a>
+    </p>
+  </div>
+
+</div>
+
+</div>
+
+
+
+
     <div class="flex justify-center items-center pt-30">
         
 <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
