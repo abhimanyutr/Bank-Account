@@ -10,14 +10,16 @@
 </head>
 <body>
 
-<div class="flex flex-col md:flex-row justify-center items-center gap-10 px-10 bg-gray-800 py-10">
+<div class="flex flex-col-reverse md:flex-row justify-center items-center gap-10 px-10 bg-gray-800 ">
   <!-- Left -->
   <div class="flex-1  flex-col items-center justify-center px-4 py-8 md:px-16 lg:px-32 text-center text-gray-300">
 
   <!-- Heading Section -->
-  <div class="mb-8">
+  <div class="mb-8 flex flex-col justify-center">
+    
     <h1 class="font-extrabold text-3xl sm:text-4xl lg:text-5xl mb-4">Welcome Back</h1>
     <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold mb-2">BankEase</h2>
+   
     <h3 class="text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
       Swift and secure money transfers worldwide. Experience banking reimagined, with real-time tracking and seamless digital convenience.
     </h3>
@@ -53,6 +55,8 @@
         </div>
       </a>
 
+      
+
     </div>
 
     <!-- Second row -->
@@ -83,10 +87,12 @@
     </div>
 
   </div>
+  
+  
 </div>
 
   <!-- Right -->
-  <div class="flex flex-col items-center justify-center min-h-screen px-4 py-8">
+  <div class="flex w-full flex-col items-center justify-center min-h-screen px-4 py-8">
   
   <!-- Login Card -->
   <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-md">
@@ -98,11 +104,17 @@
     <form action="/login" method="POST" class="space-y-5">
       
       <!-- Name / Email -->
-      <div>
-        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your Name"
-          class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3 dark:bg-gray-700 dark:text-white" required>
-      </div>
+     <div>
+  <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+    Registered Email
+  </label>
+  <input type="email" id="email" name="email" 
+    placeholder="Enter your registered email"class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm 
+           focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 
+           p-3 dark:bg-gray-700 dark:text-white" 
+    required
+  >
+</div>
 
       <!-- Password -->
       <div>
@@ -118,10 +130,13 @@
           <span class="ml-2">Remember me</span>
         </label>
         <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Forgot password?</a>
+
+        
+
       </div>
 
       <!-- Login Button -->
-      <button type="submit"
+      <button type="button" onclick="Verify()"
         class="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white p-3 rounded-lg font-semibold shadow transition">
         Login
       </button>
@@ -141,80 +156,29 @@
     </p>
   </div>
 
-</div>
+   <button onclick="" 
+    class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700">
+    <i class="fa-solid fa-arrow-left text-lg"></i>
+  </button>
 
 </div>
 
+</div>
 
 
-
-    <div class="flex justify-center items-center pt-30">
-        
-<div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-    <!-- Logo / Title -->
-    <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">🏦 Bank Account Login</h2>
-
-    <!-- Login Form -->
-    <form action="/login" method="POST" class="space-y-5">
-      
-      <!-- Email / Username -->
-      <div>
-        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your Name"
-          class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3" required>
-      </div>
-
-      <!-- Password -->
-      <div>
-        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password"
-          class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3" required>
-      </div>
-
-      <!-- Remember Me + Forgot Password -->
-      <div class="flex items-center justify-between">
-        <label class="flex items-center text-sm">
-          <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500">
-          <span class="ml-2 text-gray-600">Remember me</span>
-        </label>
-        <a href="#" class="text-sm text-blue-600 hover:underline">Forgot password?</a>
-      </div>
-
-      <!-- Login Button -->
-      <button onclick="Verify()" type="button"
-        class="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold shadow hover:bg-blue-700 transition">
-        Login
-      </button>
-    </form>
-
-    <!-- Divider -->
-    <div class="flex items-center my-6">
-      <hr class="flex-grow border-gray-300">
-      <span class="mx-2 text-gray-400 text-sm">OR</span>
-      <hr class="flex-grow border-gray-300">
-    </div>
-
-    <!-- Sign Up Redirect -->
-    <p class="text-center text-sm text-gray-600">
-      Don’t have an account? 
-      <a href="./register.html" class="text-blue-600 font-medium hover:underline">Create one</a>
-    </p>
-  </div>
-
-    </div>
     <script>
      function Verify() {
     let resultPass = password.value;
-    let resultname = name.value;
+    let resultemail = email.value;
     console.log(resultPass);
 
     // Use variable (without quotes)
-     if(JSON.parse(localStorage.getItem(resultPass)))
+     if(JSON.parse(localStorage.getItem(resultemail)))
      {
        
-        userData = JSON.parse(localStorage.getItem(resultPass));
-         console.log("Login SuccessFull",userData.fname);
-         localStorage.setItem("username",userData.fname);
+        userData = JSON.parse(localStorage.getItem(resultemail));
+         console.log("Login SuccessFull",userData.fullName);
+         localStorage.setItem("activeUser",userData.email);
          window.location.href = "homepage.html";
      }
      else{
