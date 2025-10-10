@@ -374,3 +374,145 @@ ul {
   width: 48px;
   height: 48px;
 }
+
+/* From Uiverse.io by mrhyddenn */ 
+
+.card_load_extreme_descripion {
+  width: 220px;
+  height: 23px;
+  float: right;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  
+}
+
+@media (max-width: 640px) {
+  .card_load_extreme_descripion {
+    width: 120px;       
+    max-width: none;   
+    float: none;
+    margin: 10px auto; 
+    height: 28px; 
+         
+  }
+}
+
+@keyframes load89234 {
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* From Uiverse.io by reshades */ 
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.form p {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.path {
+  fill: #369eff
+}
+
+.svg {
+  filter: blur(20px);
+  z-index: -1;
+  position: absolute;
+  opacity: 50%;
+  animation: anim 3s infinite;
+}
+
+.inp {
+  margin-left: auto;
+  margin-right: auto;
+  white-space: 4px;
+}
+
+.input + .input {
+  margin-left: 0.3em
+}
+
+
+
+
+.form button {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #00000000;
+  color: #fff;
+  width: 8.5em;
+  height: 2.3em;
+  border: #369eff 0.2em solid;
+  border-radius: 11px;
+  transition: all 0.5s ease;
+}
+
+.form button:hover {
+  background-color: #369eff;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(-70px);
+  }
+
+  50% {
+    transform: translateY(-19px);
+  }
+
+  100% {
+    transform: translateY(-70px);
+  }
+}
+
+/* From Uiverse.io by jack0237 */ 
+.loader {
+  display: flex;
+}
+
+.loader .dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+ 
+  background: #16b0c1;
+  animation: jump 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes jump {
+  100% {
+    background: #005fdc;
+    transform: translateZ(-3rem) scale(1.9);
+  }
+}
+
+.loader .dot:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.loader .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader .dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.loader .dot:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.loader .dot:nth-child(5) {
+  animation-delay: 0.5s;
+}
