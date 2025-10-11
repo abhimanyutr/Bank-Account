@@ -239,7 +239,9 @@ function userRegister() {
         confirmPassword: confirmPassword.value,
         mobile: phone.value.trim(),
         pin: "",
-        accno: ""
+        accno: "",
+        balance:0,
+        transaction:[]
     };
 
     if (!datas.fullName || !datas.email || !datas.password || !datas.confirmPassword || !datas.mobile) {

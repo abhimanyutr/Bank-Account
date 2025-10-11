@@ -293,7 +293,7 @@
     <div>
       <h1 class="text-green-600 font-bold"><i class="fa-solid fa-circle text-green-400 "></i> Account Active</h1>
       <h1 class="text-gray-800 font-bold" ><i class="fa-solid fa-shield-halved text-green-800"></i> Verifiend</h1>
-      <button type="button" class="my-1 font-bold text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none  rounded-lg text-sm  px-5 sm:py-2.5 p-1 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2 transform transition-transform duration-300 hover:scale-105">
+      <button onclick="balance()" data-modal-target="authentication-modal-balance" data-modal-toggle="authentication-modal-balance" type="button" class="my-1 font-bold text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none  rounded-lg text-sm  px-5 sm:py-2.5 p-1 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2 transform transition-transform duration-300 hover:scale-105">
       <img 
   class="border-0 rounded-full mr-4" 
   src="https://cdn3d.iconscout.com/3d/premium/thumb/indian-rupee-3d-icon-png-download-7502556.png" 
@@ -320,7 +320,7 @@
 <div class="flex flex-row justify-start gap-3 sm:gap-4 pr-7 md:ml-3">
 
   <!-- Deposit -->
-  <button type="button"
+  <button type="button" data-modal-target="authentication-modal-deposit" data-modal-toggle="authentication-modal-deposit"
     class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 transform transition-transform duration-300 hover:scale-105">
     <img 
       class="border-0 rounded-full mr-2 sm:mr-4" 
@@ -333,7 +333,7 @@
   </button>
 
   <!-- Transaction History -->
-  <button type="button"
+  <button type="button"  data-modal-target="authentication-modal-history" data-modal-toggle="authentication-modal-history"
     class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-[#050708] hover:bg-[#050708]/50 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 transform transition-transform duration-300 hover:scale-105">
     <img 
       class="border-0 rounded-full mr-2 sm:mr-4" 
@@ -346,7 +346,7 @@
   </button>
 
   <!-- Withdrawal -->
-  <button type="button"
+  <button type="button" data-modal-target="authentication-modal-withdraw" data-modal-toggle="authentication-modal-withdraw"
     class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 transform transition-transform duration-300 hover:scale-105">
      <img 
       class="border-0 rounded-full mr-2 sm:mr-4" 
@@ -380,9 +380,9 @@
 
 
 
-
   <!-- Right: 30% -->
   <div class="flex-[3] flex items-center justify-center h-82  rounded-sm bg-gray-50 dark:bg-gray-800">
+    
     <p class="text-2xl text-gray-400 dark:text-gray-500">
       <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
@@ -462,155 +462,99 @@
       </div>
    </div>
 </div>
+<!-- modal -->
 
 
+<!-- Modal toggle -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="bg-white h-screen">
-
-        <!-- navbar -->
-        <nav
-            class="relative h-screen bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
-            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div class="relative flex h-16 items-center justify-between">
-                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button-->
-                        <button type="button" command="--toggle" commandfor="mobile-menu"
-                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
-                            <span class="absolute -inset-0.5"></span>
-                            <span class="sr-only">Open main menu</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
-                                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                                data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
-                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <div class="flex shrink-0 items-center">
-                            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                                alt="Your Company" class="h-8 w-auto" />
-                        </div>
-                        <div class="hidden sm:ml-6 sm:block">
-                            <div class="flex space-x-4">
-                                <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-                                <a href="#" aria-current="page"
-                                    class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
-                                <a href="#"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
-                                <a href="#"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
-                                <a href="#"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ml-3 gap-4">
-                        <a href="./register.html"> <button type="button"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register</button>
-                        </a>
-                        <a href="./login.html"> <button type="button"
-                                class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">login</button>
-                        </a>
-
-                    </div>
-
-                    <!-- Profile dropdown -->
-                    <el-dropdown class="relative ml-3">
-                        <button
-                            class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-                            <span class="absolute -inset-1.5"></span>
-                            <span class="sr-only">Open user menu</span>
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                alt=""
-                                class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
-                        </button>
-                </div>
-            </div>
-
-
-
-            <!-- banner -->
-            <div class="md:grid-cols-2 grid grid-cols-1 gap-2 px-10 py-10 h-120">
-                <div class="flex justify-center item-center pt-20">
-                    <div>
-                        <h1 id="welcomeUser" class="text-2xl font-extrabold pb-2"></h1>
-                        <h3>Secure, Fast, and Reliable Banking at Your Fingertips.</h3>
-                        <div class="flex justify-between item-center pt-10 gap-6">
-                            <button type="button" onclick="deposit()"
-                                class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  dark:focus:ring-[#FF9119]/40 me-2 mb-2">
-                                <i class="fa-solid fa-piggy-bank pr-7"></i> Deposit
-                            </button>
-                            <button type="button" onclick="withdraw()"
-                                class="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  dark:focus:ring-[#FF9119]/40 me-2 mb-2">
-                                <i class="fa-solid fa-money-bill-transfer pr-7"></i>Withdraw
-                            </button>
-                            <button onclick="balance()" type="button"
-                                class="text-white bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  dark:focus:ring-[#FF9119]/40 me-2 mb-2">
-                                <i class="fa-solid fa-magnifying-glass-dollar pr-7"></i>Balance
-                            </button>
-                        </div>
-                        <div id="statusList"
-                            class="mt-10 text-xl font-bold bg-gradient-to-r to-emerald-100 from-sky-100 p-5 pt-10  h-60 rounded-2xl border-blue-50 shadow-2xl border-2">
-
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div>
-
-                    <div data-aos="fade-left"></div>
-                    <div id="contentdiv"
-                        class="max-w-2xl border-blue-500 border-5 p-4 bg-gray-100 rounded-2xl shadow-lg">
-                        <video class="w-full h-auto rounded-xl" autoplay muted loop>
-                            <source src="./paymentVideo.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </nav>
-
+<!-- Main modal Depost-->
+<div id="authentication-modal-deposit" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <!-- From Uiverse.io by vinodjangid07 -->
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from Deposit</h1>        
+<div class="InputContainer focus:ring-blue-500 ">
+   
+  <input id="pin-deposit" placeholder="PIN : X X X X " maxlength="4"  class="input text-center" name="text" type="text">
+<div class=" pl-8">
+  <button onclick="pin('pin-deposit')" type="button" class=" shadow-xl rounded-full scale-105 hover:scale-135 transition-all">
+    <i class="fa-solid fa-arrow-right text-blue-700 dark:hover:text-blue-300 font-extrabold"></i>
+  </button>
+</div>
+</div>
     </div>
+</div> 
+
+<!-- Main modal History-->
+<div id="authentication-modal-history" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <!-- From Uiverse.io by vinodjangid07 -->
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from History</h1>        
+<div class="InputContainer focus:ring-blue-500 ">
+   
+  <input id="pin-History" placeholder="PIN : X X X X " maxlength="4"  class="input text-center" name="text" type="text">
+<div class=" pl-8">
+  <button type="button" onclick="pin('pin-History')" class=" shadow-xl rounded-full scale-105 hover:scale-135 transition-all">
+    <i class="fa-solid fa-arrow-right text-blue-700 dark:hover:text-blue-300 font-extrabold"></i>
+  </button>
+</div>
+</div>
+    </div>
+</div> 
+
+<!-- Main modal Withdraw-->
+<div id="authentication-modal-withdraw" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <!-- From Uiverse.io by vinodjangid07 -->
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from Withdraw</h1>        
+<div class="InputContainer focus:ring-blue-500 ">
+   
+  <input id="pin-withdraw" placeholder="PIN : X X X X " maxlength="4"  class="input text-center" name="text" type="text">
+<div class=" pl-8">
+  <button onclick="pin('pin-withdraw')" type="button" class=" shadow-xl rounded-full scale-105 hover:scale-135 transition-all">
+    <i class="fa-solid fa-arrow-right text-blue-700 dark:hover:text-blue-300 font-extrabold"></i>
+  </button>
+</div>
+</div>
+    </div>
+</div> 
+
+
+<!-- Main modal Balance-->
+<div id="authentication-modal-balance" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <!-- From Uiverse.io by vinodjangid07 -->
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from Balance</h1>        
+<div class="InputContainer focus:ring-blue-500 ">
+   
+  <input id="pin-balance" placeholder="PIN : X X X X " maxlength="4" class="input text-center" name="text" type="text">
+<div class=" pl-8">
+  <button onclick="pin('pin-balance')" type="button" class=" shadow-xl rounded-full scale-105 hover:scale-135 transition-all">
+    <i class="fa-solid fa-arrow-right text-blue-700 dark:hover:text-blue-300 font-extrabold"></i>
+  </button>
+</div>
+</div>
+    </div>
+</div> 
+
+
+<button  class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+  Toggle modal
+</button>
+
+
+
 
 
     <script>
         currentuser = localStorage.getItem("activeUser");
         console.log(currentuser);
         user = JSON.parse(localStorage.getItem(currentuser));
-        welcomeUser.innerHTML = `Welcome ${user.fullName} <br> Your Account Number : ${user.accno}`;
+       
         navbarWelcome.innerHTML = `Welcome ${user.fullName} `;
         accno.innerHTML=`Account Number : ${user.accno}`;
         accno2.innerHTML=`${user.accno}`;
@@ -653,7 +597,23 @@
 
 `
         }
-        function caldeposit() {
+        function caldeposit(amount) {
+             
+           user.transaction.push({
+           type: "Deposit",
+           amount: 500,
+           date: new Date().toLocaleString()
+  });
+  
+  user.balance += amount;
+
+  // Save updated object back to localStorage
+  localStorage.setItem(currentuser, JSON.stringify(user));
+
+  alert(`₹${amount} deposited successfully!`);
+          
+
+
             let calpass = depositpassword.value;
             let calamount = parseFloat(depositAmount.value);
 
@@ -702,80 +662,101 @@
         }
 
 
-        function withdraw() {
-
-            contentdiv.innerHTML = `<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg shadow-lg p-6">
-  <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
-     Withdrawal Form
-  </h2>
-
-  <form id="withdrawForm">
-    <!-- Username -->
-    <div class="mb-4">
-      <label for="withdrawUsername" class="block text-sm font-medium text-gray-700">Username</label>
-      <input type="text" id="withdrawUsername" name="withdrawUsername" placeholder="Enter your username"
-        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-red-500 focus:border-red-500 p-2.5" required>
-    </div>
-
-    <!-- Withdrawal Amount -->
-    <div class="mb-4">
-      <label for="withdrawAmount" class="block text-sm font-medium text-gray-700">Withdrawal Amount</label>
-      <input type="number" id="withdrawAmount" name="withdrawAmount" placeholder="Enter amount" min="1"
-        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-red-500 focus:border-red-500 p-2.5" required>
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex justify-center">
-      <button type="submit" onclick="calWithdraw()"
-        class="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
-        <i class="fa-solid fa-money-bill-transfer pr-7"></i> Submit Withdrawal
-      </button>
-    </div>
-  </form>
-</div>
-`}
-function calWithdraw()
+function pin(inputId){ 
+  console.log(inputId);
+  
+  let pin_number = document.getElementById(inputId).value;
+  if(pin_number === user.pin)
 {
-    const username = withdrawUsername.value;
-    const amt = withdrawAmount.value;
-    console.log(username,amt);
-    
-
+  console.log("Authentication Success full");
+  
+}
+else{
+  console.log("Authentication Failed");
+  
+}
+    console.log("Pin Entered",pin_number);
+  
 }
 
+    
+function calWithdraw(amount) {
+   
+   
+    // Ensure user.balance is a number
+    if (!user.balance || isNaN(user.balance)) {
+        user.balance = 0;
+    } else {
+        user.balance = Number(user.balance);
+    }
 
-        function balance() {
-            contentdiv.innerHTML = `<div class="max-w-md mx-auto bg-white md:h-89 border border-gray-200 rounded-lg  p-6">
-  <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
-    Check your Balance
-  </h2>
+    // If no amount is passed (button click), get from input
+    if (!amount) {
+        amount = parseFloat(document.getElementById("withdrawAmount").value);
+    }
 
-  <form id="balanceForm">
-    <!-- Username -->
-    <div class="mb-4 mt-10">
-      <label for="balanceUsername" class="block text-sm font-medium text-gray-700">Password</label>
-      <input type="text" id="balancepass" name="balancepass" placeholder="Enter your password"
-        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500 p-2.5" required>
-    </div>
+    if (!amount || amount <= 0) {
+        console.log("⚠️ Enter a valid amount to withdraw.");
+        return;
+    }
 
-    <!-- Button -->
-    <div class="flex justify-center">
-      <button type="submit"
-        class="text-white mt-10 bg-indigo-500 hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
-        <i class="fa-solid fa-magnifying-glass-dollar pr-2"></i> Check Balance
-      </button>
-    </div>
-  </form>
-</div>
-`
-        }
+    if (user.balance === 0) {
+        console.log("❌ Sorry, your account is empty.");
+        alert("Sorry, your account is empty.");
+        return;
+    }
 
+    if (amount > user.balance) {
+        console.log("❌ Insufficient balance");
+        alert("Insufficient balance");
+        return;
+    }
+
+    // Deduct
+    user.balance -= amount;
+
+    // Optionally push into transaction history
+    user.transaction.push({
+        type: "Withdraw",
+        amount: amount,
+        date: new Date().toLocaleString()
+    });
+
+    // Save back to localStorage
+    localStorage.setItem(currentuser, JSON.stringify(user));
+
+    console.log(`✅ Withdraw Successful! New Balance: ${user.balance}`);
+    alert(`Withdraw Successful! New Balance: ${user.balance}`);
+}
+
+           
+     function balance() {
+    // Ensure balance exists and is a number
+    if (!user.balance || isNaN(user.balance)) {
+        user.balance = 0;
+    }
+
+    console.log("Current Balance:", user.balance);
+    alert("Your Current Balance is: " + user.balance);
+}   
+
+function showHistory() {
+  const activeEmail = localStorage.getItem("activeUser");
+  let user = JSON.parse(localStorage.getItem(activeEmail));
+
+  console.log(user.transaction);
+  alert(JSON.stringify(user.transaction, null, 2));
+}
 
 // Darkmode
 
 
 
     </script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.1/flowbite.min.js"></script>
 
 
 </body>

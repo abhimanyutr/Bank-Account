@@ -516,3 +516,43 @@ ul {
 .loader .dot:nth-child(5) {
   animation-delay: 0.5s;
 }
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.InputContainer {
+  height: 55px;
+  width: 300PX;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:  rgb(0, 0, 0);
+  overflow: hidden;
+  padding: 0px 5px 0px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.322);
+  border-radius: 70px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.input {
+  width: 170px;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: rgb(255, 81, 0);
+  background-color: rgb(8, 8, 8);
+  font-weight: 600;
+  color: white;
+}
+
+.visaCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  pointer-events: none;
+  border-radius: 7px;
+}
+
