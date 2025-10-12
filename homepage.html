@@ -124,7 +124,7 @@
         <div class="flex items-center">
             <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                 <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+                    <a href="./index.html" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
                 </li>
                 <li>
                     <a href="#" class="text-gray-900 dark:text-white hover:underline">Company</a>
@@ -137,7 +137,7 @@
                 </li>
             </ul>
         </div>
-
+         <div id="depositResult" class="text-2xl text-green-400"> </div>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
          <h2 class="text-blue-500" id="accno"></h2>
         </div>
@@ -145,7 +145,7 @@
 </nav>
   
     <!-- Navbarends -->
-
+   
 
    <div class="p-4 rounded-lg dark:border-gray-700">
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-4">
@@ -156,7 +156,7 @@
         <i class="fa-solid fa-chart-simple text-white text-lg"></i>
       </div>
       <div>
-        <h5 class="text-xl pt-2 font-bold text-gray-900 dark:text-white">$500,000.00</h5>
+        <h5 class="text-xl pt-2 font-bold text-gray-900 dark:text-white" >$500,000.00</h5>
         <p class="text-gray-500 dark:text-gray-400">Account Limit</p>
       </div>
     </div>
@@ -180,7 +180,7 @@
         <i class="fa-solid fa-piggy-bank text-white text-lg"></i>
       </div>
       <div>
-        <h5 class="text-xl pt-2 font-bold text-gray-900 dark:text-white">$0.00</h5>
+        <h5 class="text-xl pt-2 font-bold text-gray-900 dark:text-white" id="monthlydeposit"></h5>
         <p class="text-gray-500 dark:text-gray-400">Monthly Deposit</p>
       </div>
     </div>
@@ -268,8 +268,8 @@
     
       <div class="space-y-1 text-sm text-gray-800">
           
-    <p> <span class="font-extrabold text-gray-700 text-lg">Available Balance:</span></p>
-     <p> <span id="balanceText " class="ml-10 text-2xl text-gray-900">XX,XXX</span></p>
+    <p> <span class="font-extrabold text-gray-700 text-lg pl-3">Account Balance:</span></p>
+     <p> <span id="balanceText" class="ml-10 text-2xl text-gray-900 items-center">XX,XXX</span></p>
      <P> <div class="loader pl-13">
   <div class="dot"></div>
   <div class="dot"></div>
@@ -293,7 +293,7 @@
     <div>
       <h1 class="text-green-600 font-bold"><i class="fa-solid fa-circle text-green-400 "></i> Account Active</h1>
       <h1 class="text-gray-800 font-bold" ><i class="fa-solid fa-shield-halved text-green-800"></i> Verifiend</h1>
-      <button onclick="balance()" data-modal-target="authentication-modal-balance" data-modal-toggle="authentication-modal-balance" type="button" class="my-1 font-bold text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none  rounded-lg text-sm  px-5 sm:py-2.5 p-1 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2 transform transition-transform duration-300 hover:scale-105">
+      <button onclick="displayBalance()" type="button" class="my-1 font-bold text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none  rounded-lg text-sm  px-5 sm:py-2.5 p-1 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2 transform transition-transform duration-300 hover:scale-105">
       <img 
   class="border-0 rounded-full mr-4" 
   src="https://cdn3d.iconscout.com/3d/premium/thumb/indian-rupee-3d-icon-png-download-7502556.png" 
@@ -381,13 +381,24 @@
 
 
   <!-- Right: 30% -->
-  <div class="flex-[3] flex items-center justify-center h-82  rounded-sm bg-gray-50 dark:bg-gray-800">
+  <div class="flex-[3] flex items-center relative justify-center h-82  rounded-sm bg-gray-50 dark:bg-gray-800">
     
-    <p class="text-2xl text-gray-400 dark:text-gray-500">
-      <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-      </svg>
-    </p>
+    <div class="absolute top-2 w-full flex justify-between px-5">
+      <h1 class="text-md font-bold text-green-700">Recent Transactions</h1>
+      <button data-modal-target="authentication-modal-history" data-modal-toggle="authentication-modal-history"><h2 class="text-sm font-bold text-blue-500 pt-1"> View all</h2></button>
+    </div>
+    <div class="w-full px-6 pt-4" id="recent-transactions">
+
+        <ul class="w-full divide-y divide-gray-200 dark:divide-gray-700" id="listContainer">
+   
+</ul>
+
+
+    </div>
+    
+
+
+    
   </div>
 </div>
 
@@ -473,7 +484,7 @@
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <!-- From Uiverse.io by vinodjangid07 -->
-  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from Deposit</h1>        
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN</h1>        
 <div class="InputContainer focus:ring-blue-500 ">
    
   <input id="pin-deposit" placeholder="PIN : X X X X " maxlength="4"  class="input text-center" name="text" type="text">
@@ -491,7 +502,7 @@
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <!-- From Uiverse.io by vinodjangid07 -->
-  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from History</h1>        
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN </h1>        
 <div class="InputContainer focus:ring-blue-500 ">
    
   <input id="pin-History" placeholder="PIN : X X X X " maxlength="4"  class="input text-center" name="text" type="text">
@@ -509,7 +520,7 @@
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <!-- From Uiverse.io by vinodjangid07 -->
-  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from Withdraw</h1>        
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN </h1>        
 <div class="InputContainer focus:ring-blue-500 ">
    
   <input id="pin-withdraw" placeholder="PIN : X X X X " maxlength="4"  class="input text-center" name="text" type="text">
@@ -523,17 +534,18 @@
 </div> 
 
 
+
 <!-- Main modal Balance-->
 <div id="authentication-modal-balance" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <!-- From Uiverse.io by vinodjangid07 -->
-  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN from Balance</h1>        
+  <h1 class="pl-15 font-extrabold text-blue-200 text-shadow-white">Please enter your PIN </h1>        
 <div class="InputContainer focus:ring-blue-500 ">
    
   <input id="pin-balance" placeholder="PIN : X X X X " maxlength="4" class="input text-center" name="text" type="text">
 <div class=" pl-8">
-  <button onclick="pin('pin-balance')" type="button" class=" shadow-xl rounded-full scale-105 hover:scale-135 transition-all">
+  <button onclick="pin('pin-balance')" type="button" class="shadow-xl rounded-full scale-105 hover:scale-135 transition-all">
     <i class="fa-solid fa-arrow-right text-blue-700 dark:hover:text-blue-300 font-extrabold"></i>
   </button>
 </div>
@@ -542,15 +554,116 @@
 </div> 
 
 
-<button  class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-  Toggle modal
-</button>
 
 
 
 
+<!-- Main modal Deposit -->
+<div id="progress-modal-deposit" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal Content -->
+<div class="p-4 md:p-5 bg-gray-700 rounded-lg ">
+    <svg class="w-10 h-10 text-gray-400 dark:text-gray-500 mb-4 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+        <path d="M8 5.625c4.418 0 8-1.063 8-2.375S12.418.875 8 .875 0 1.938 0 3.25s3.582 2.375 8 2.375Zm0 13.5c4.963 0 8-1.538 8-2.375v-4.019c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353c-.193.081-.394.158-.6.231l-.189.067c-2.04.628-4.165.936-6.3.911a20.601 20.601 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244c-.053-.028-.113-.053-.165-.082v4.019C0 17.587 3.037 19.125 8 19.125Zm7.09-12.709c-.193.081-.394.158-.6.231l-.189.067a20.6 20.6 0 0 1-6.3.911 20.6 20.6 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244C.112 6.035.052 6.01 0 5.981V10c0 .837 3.037 2.375 8 2.375s8-1.538 8-2.375V5.981c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353Z"/>
+    </svg>
 
-    <script>
+    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">Deposit Amount</h3>
+
+    <!-- Input Field -->
+    <div class="mb-6">
+        <input type="number" id="depositAmount" placeholder="Enter amount"
+            class="w-full px-4 py-3 text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"/>
+    </div>
+
+    <!-- Modal Footer Buttons -->
+    <div class="flex justify-center gap-4">
+        <button type="button" onclick="caldeposit()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Submit
+        </button>
+        <button type="button" data-modal-hide="progress-modal-deposit" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            Cancel
+        </button>
+    </div>
+</div>
+
+    </div>
+</div> 
+
+<!-- Main modal history -->
+<div id="progress-modal-history" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div class="relative p-4 w-full max-w-md max-h-full">
+      
+        <!-- Modal Content -->
+<div class="p-4 md:p-5 bg-gray-700 rounded-lg ">
+   <button onclick="closeModal('progress-modal-history')" data-tooltip-target="tooltip-dark" type="button"><div class="shrink-0 rounded-full p-0.5 ">
+            <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/3545/3545314.png" alt="Neil image">
+         </div></button>
+
+         <div id="tooltip-dark" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+    Back
+    <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
+
+    <svg class="w-10 h-10 text-gray-400 dark:text-gray-500 mb-4 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+        <path d="M8 5.625c4.418 0 8-1.063 8-2.375S12.418.875 8 .875 0 1.938 0 3.25s3.582 2.375 8 2.375Zm0 13.5c4.963 0 8-1.538 8-2.375v-4.019c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353c-.193.081-.394.158-.6.231l-.189.067c-2.04.628-4.165.936-6.3.911a20.601 20.601 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244c-.053-.028-.113-.053-.165-.082v4.019C0 17.587 3.037 19.125 8 19.125Zm7.09-12.709c-.193.081-.394.158-.6.231l-.189.067a20.6 20.6 0 0 1-6.3.911 20.6 20.6 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244C.112 6.035.052 6.01 0 5.981V10c0 .837 3.037 2.375 8 2.375s8-1.538 8-2.375V5.981c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353Z"/>
+    </svg>
+
+    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">Transaction History</h3>
+    
+    <!-- Input Field -->
+    <div class="mb-6">
+
+      <div class="w-full px-6 pt-4" id="allTransactions">
+
+        <ul class="w-full divide-y divide-gray-200 dark:divide-gray-700" id="transactionList">
+   
+</ul>
+
+
+    </div>
+
+        </div>
+
+    
+</div>
+
+    </div>
+</div>
+
+<!-- Main modal withdraw -->
+<div id="progress-modal-withdraw" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <!-- Modal Content -->
+<div class="p-4 md:p-5 bg-gray-700 rounded-lg ">
+    <svg class="w-10 h-10 text-gray-400 dark:text-gray-500 mb-4 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+        <path d="M8 5.625c4.418 0 8-1.063 8-2.375S12.418.875 8 .875 0 1.938 0 3.25s3.582 2.375 8 2.375Zm0 13.5c4.963 0 8-1.538 8-2.375v-4.019c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353c-.193.081-.394.158-.6.231l-.189.067c-2.04.628-4.165.936-6.3.911a20.601 20.601 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244c-.053-.028-.113-.053-.165-.082v4.019C0 17.587 3.037 19.125 8 19.125Zm7.09-12.709c-.193.081-.394.158-.6.231l-.189.067a20.6 20.6 0 0 1-6.3.911 20.6 20.6 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244C.112 6.035.052 6.01 0 5.981V10c0 .837 3.037 2.375 8 2.375s8-1.538 8-2.375V5.981c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353Z"/>
+    </svg>
+
+    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center"> Withdraw Amount</h3>
+
+    <!-- Input Field -->
+    <div class="mb-6">
+        <input type="number" id="AmountInput" placeholder="Enter amount"
+            class="w-full px-4 py-3 text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"/>
+    </div>
+
+    <!-- Modal Footer Buttons -->
+    <div class="flex justify-center gap-4">
+        <button type="button" onclick="calWithdraw()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Submit
+        </button>
+        <button type="button" data-modal-hide="progress-modal" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+            Cancel
+        </button>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<script>
         currentuser = localStorage.getItem("activeUser");
         console.log(currentuser);
         user = JSON.parse(localStorage.getItem(currentuser));
@@ -562,183 +675,277 @@
         useremail.innerHTML=`${user.email}`
         console.log("successfull");
 
-        function deposit() {
-            contentdiv.innerHTML = `
+function allTransaction()
+{
+if (!user || !user.transaction || user.transaction.length === 0) {
+        document.getElementById("recent-transactions").innerHTML =` <div class=" flex items-center relative justify-center   rounded-sm ">
 
-<div class="max-w-md mx-auto bg-white border border-gray-200 rounded-lg md:h-89   p-6">
-  <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">
-     Deposit Form
-  </h2>
+          <p class="text-sm font-extrabold text-gray-900 truncate dark:text-white">
+               No  transactions  yet.
+            </p>
 
-  <form id="depositForm">
-    <!-- Username (Optional if you want user to enter it) -->
-    <div class="mb-4">
-      <label for="depositpassword" class="block text-sm font-medium text-gray-700">Password</label>
-      <input type="text" id="depositpassword" name="depositpassword" placeholder="Enter your Password"
-        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500 p-2.5" required>
-    </div>
-
-    <!-- Deposit Amount -->
-    <div class="mb-4">
-      <label for="depositAmount" class="block text-sm font-medium text-gray-700">Deposit Amount</label>
-      <input type="number" id="depositAmount" name="depositAmount" placeholder="Enter amount" min="1"
-        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500 p-2.5" required>
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex justify-center">
-      <button onclick="caldeposit()" type="button"
-        class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center">
-        <i class="fa-solid fa-piggy-bank pr-7"></i> Submit Deposit
-      </button>
-    </div>
-  </form>
-</div>
-
-`
-        }
-        function caldeposit(amount) {
-             
-           user.transaction.push({
-           type: "Deposit",
-           amount: 500,
-           date: new Date().toLocaleString()
-  });
-  
-  user.balance += amount;
-
-  // Save updated object back to localStorage
-  localStorage.setItem(currentuser, JSON.stringify(user));
-
-  alert(`₹${amount} deposited successfully!`);
+          </div>`;
+        return;
+    }
+    else{
+          const recentTransactions = user.transaction.slice().reverse();
+          console.log(recentTransactions);
           
+   transactionList.innerHTML = ""; // Clear old content
+          recentTransactions.forEach(data=>{
+          txtColor = data.type==="Deposit" ? "text-green-500" : "text-red-600"
+          bgColor = data.type==="Deposit" ? "bg-green-500/20" : "bg-red-600/20"
+        const result = ` <li class="pb-3 sm:pb-4 ">
+      <div class="flex  items-center justify-between space-x-4 rtl:space-x-reverse">
+         <div class="shrink-0 rounded-full p-0.5 ${bgColor}">
+            <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6321/6321913.png" alt="Neil image">
+         </div>
+         <div class="flex-1 min-w-0">
+            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+               ${data.type}
+            </p>
+            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+               ${data.date}
+            </p>
+         </div>
+         <div class="inline-flex items-center text-base font-semibold ${txtColor}   hover:scale-130 transition-transform duration-200">
+            $ ${data.amount}
+         </div>
+      </div>
+   </li>`;
+   transactionList.innerHTML += result;
+          
+        });
+    }  
+}
+allTransaction();
 
 
-            let calpass = depositpassword.value;
-            let calamount = parseFloat(depositAmount.value);
+function recentTransaction()
+{
+  if (!user || !user.transaction || user.transaction.length === 0) {
+        document.getElementById("recent-transactions").innerHTML =` <div class=" flex items-center relative justify-center   rounded-sm ">
 
-            console.log(calpass, calamount);
+          <p class="text-sm font-extrabold text-gray-900 truncate dark:text-white">
+               No  transactions  yet.
+            </p>
 
-            // Validate amount
-            if (isNaN(calamount) || calamount <= 0) {
-                alert("Please enter a valid amount");
-                return;
-            }
+          </div>`;
+        return;
+    }
+    else{
+          const recentTransactions = user.transaction.slice(-4).reverse();
+          console.log(recentTransactions);
+          listContainer.innerHTML = ""; // Clear old content
+          recentTransactions.forEach(data=>{
+          txtColor = data.type==="Deposit" ? "text-green-500" : "text-red-600"
+          bgColor = data.type==="Deposit" ? "bg-green-500/20" : "bg-red-600/20"
+        const result = ` <li class="pb-3 sm:pb-4 ">
+      <div class="flex  items-center justify-between space-x-4 rtl:space-x-reverse">
+         <div class="shrink-0 rounded-full p-0.5 ${bgColor}">
+            <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6321/6321913.png" alt="Neil image">
+         </div>
+         <div class="flex-1 min-w-0">
+            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+               ${data.type}
+            </p>
+            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+               ${data.date}
+            </p>
+         </div>
+         <div class="inline-flex items-center text-base font-semibold ${txtColor}   hover:scale-130 transition-transform duration-200">
+            $ ${data.amount}
+         </div>
+      </div>
+   </li>`;
+   listContainer.innerHTML += result;
+        });
+    }
+}
 
-            // Check user exists in localStorage
-            let userData = JSON.parse(localStorage.getItem(calpass));
-
-            if (userData) {
-                console.log("Before Deposit:", userData);
-
-                // Initialize balance if missing
-                if (!userData.balance) {
-                    userData.balance = 0;
-                }
-
-                // Add deposit
-                userData.balance += calamount;
-
-                // Save updated data
-                localStorage.setItem(calpass, JSON.stringify(userData));
-
-                console.log("After Deposit:", userData);
-                alert(`Deposit successful! New Balance: ${userData.balance}`);
-                statusList.innerHTML += `
-        <ul class="type-none text-center">
-        <li class=" items-center flex justify-center">
-            <svg class="w-10 h-10 me-2 text-green-500 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-            </svg>
-            
-        </li>
-        <li class="pt-5 items-center">Deposit Successful! </li>
-        <li class="pt-5items-center">New Balance: ${userData.balance}</li></ul>`
-                    ;
-            }
-            else {
-                alert("Incorrect Password");
-            }
-        }
+function monthlyDeposit(){
+  const currentMonth = new Date().getMonth();
+  const currentYear = new Date().getFullYear();
+  console.log(currentMonth+1,currentYear);
+  
+  if (!user || !user.transaction || user.transaction.length === 0){
+    return 0;
+  }
+  else{
+    const datas = user.transaction.filter(item=>{
+      if(item.type==="Deposit"){
+        dataDate = new Date(item.date);
+          return (
+          dataDate.getMonth() === currentMonth &&
+          dataDate.getFullYear() === currentYear
+        );
+      }
+      else{
+        return false
+      }
+    })
+    .reduce((sum, item) => sum + Number(item.amount), 0);
+     console.log("This Month Deposit:", datas);
+     monthlydeposit.innerHTML= `$ ${datas}.00`
+     return datas;
+  }
+}
+monthlyDeposit();
+recentTransaction();
 
 
 function pin(inputId){ 
   console.log(inputId);
-  
-  let pin_number = document.getElementById(inputId).value;
+   
+   let pin_number = document.getElementById(inputId).value;
   if(pin_number === user.pin)
 {
-  console.log("Authentication Success full");
-  
+   console.log("Authentication Success full");
+   
+   if(inputId == "pin-deposit"){
+        
+     // Show the modal
+        const modal = document.getElementById('progress-modal-deposit');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex'); // to center it
+
+        // Optional: close modal buttons
+        modal.querySelectorAll('[data-modal-hide]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            });
+        }); 
+  }
+  else if(inputId == "pin-History"){
+    console.log(" History myran");
+          
+     // Show the modal
+        const modal = document.getElementById('progress-modal-history');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex'); // to center it
+
+        // Optional: close modal buttons
+        modal.querySelectorAll('[data-modal-hide]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            });
+        });    
+  }
+  else if(inputId == "pin-withdraw"){ 
+     // Show the modal
+        const modal = document.getElementById('progress-modal-withdraw');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex'); // to center it
+
+        // Optional: close modal buttons
+        modal.querySelectorAll('[data-modal-hide]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            });
+        });
+  }
+  else{
+
+    if (!user.balance || isNaN(user.balance)) {
+        user.balance = 0;
+    }
+    
+    console.log("Current Balance:", user.balance);
+    // setTimeout(()=>location.reload(),1000)
+  }
+  displayBalance(); 
 }
+
 else{
   console.log("Authentication Failed");
   
 }
     console.log("Pin Entered",pin_number);
-  
+}
+function displayBalance()
+{
+  if (!user.balance || isNaN(user.balance)) {
+        user.balance = 0;
+    }
+      balanceText.innerHTML=`₹${user.balance} .00 `;
+         console.log("Current Balance:", user.balance);
 }
 
-    
-function calWithdraw(amount) {
+
+function caldeposit() { 
+         const amount = parseFloat(depositAmount.value);
+
+    if (isNaN(amount) || amount <= 0) {
+        alert("Please enter a valid deposit amount");
+        return;
+    }
+
+    if (!user.transaction) {
+        user.transaction = [];
+    }
+
+    user.transaction.push({
+        type: "Deposit",
+        amount: amount,
+        date: new Date().toLocaleString()
+    });
+  user.balance += amount;
+  
+  // Save updated object back to localStorage
+  localStorage.setItem(currentuser, JSON.stringify(user));
+  depositResult.innerHTML = `Amount Credited Successfully`;
+  console.log(`${amount} deposited successfully!`);
    
+   setTimeout(()=>location.reload(),2000);
+   recentTransaction();
    
-    // Ensure user.balance is a number
-    if (!user.balance || isNaN(user.balance)) {
-        user.balance = 0;
-    } else {
+  }
+
+
+function calWithdraw() {
+   const amt = parseFloat(document.getElementById('AmountInput').value.trim());
+  console.log(amt);
+    if (isNaN(user.balance)) {
         user.balance = Number(user.balance);
     }
 
-    // If no amount is passed (button click), get from input
-    if (!amount) {
-        amount = parseFloat(document.getElementById("withdrawAmount").value);
-    }
-
-    if (!amount || amount <= 0) {
-        console.log("⚠️ Enter a valid amount to withdraw.");
+    if (amt <= 0 || isNaN(amt)) {
+        alert("Enter a valid amount to withdraw.");
         return;
     }
 
     if (user.balance === 0) {
-        console.log("❌ Sorry, your account is empty.");
         alert("Sorry, your account is empty.");
         return;
     }
 
-    if (amount > user.balance) {
-        console.log("❌ Insufficient balance");
+    if (amt > user.balance) {
         alert("Insufficient balance");
         return;
     }
 
-    // Deduct
-    user.balance -= amount;
+    user.balance -= amt;
 
-    // Optionally push into transaction history
+   
     user.transaction.push({
         type: "Withdraw",
-        amount: amount,
+        amount: amt,
         date: new Date().toLocaleString()
     });
-
-    // Save back to localStorage
     localStorage.setItem(currentuser, JSON.stringify(user));
 
-    console.log(`✅ Withdraw Successful! New Balance: ${user.balance}`);
     alert(`Withdraw Successful! New Balance: ${user.balance}`);
+
+    recentTransaction();
+    location.reload();
 }
 
-           
-     function balance() {
-    // Ensure balance exists and is a number
-    if (!user.balance || isNaN(user.balance)) {
-        user.balance = 0;
-    }
 
-    console.log("Current Balance:", user.balance);
-    alert("Your Current Balance is: " + user.balance);
-}   
+    
+
 
 function showHistory() {
   const activeEmail = localStorage.getItem("activeUser");
@@ -748,9 +955,15 @@ function showHistory() {
   alert(JSON.stringify(user.transaction, null, 2));
 }
 
-// Darkmode
 
-
+// Close modal
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('hidden');   // hide modal
+        modal.classList.remove('flex');  // remove flex display if used
+    }
+}
 
     </script>
 
