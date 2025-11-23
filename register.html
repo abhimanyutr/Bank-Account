@@ -9,6 +9,8 @@
 
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- Sweet Alert -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -287,14 +289,18 @@ function saveAccountAndPin() {
 
     //Save full user data to localStorage
     localStorage.setItem(datas.email, JSON.stringify(datas));
-
-
-    alert("Registration complete! Redirecting...");
     document.getElementById("setup-modal").classList.add("hidden");
 
+  swal({ icon: "success",
+  title: "Registration Complete!",
+  text: "Your account has been created successfully.",
+  timer: 1500,
+  toast: true,
+  showConfirmButton: false});
+
     setTimeout(() => {
-        window.location.href = "register.html";
-    }, 1000);
+        window.location.href = "login.html";
+    }, 2000);
 }
 </script>
 
