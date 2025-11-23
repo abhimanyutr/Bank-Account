@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - BankEase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gray-100 min-h-screen bg-sky-800 ">
+
+     <div class="absolute bg-white rounded-full w-9 h-9 top-5 left-5"><a href="./index.html"> <img class="h-full w-9" src="https://cdn.icon-icons.com/icons2/4229/PNG/512/left_circle_arrow_icon_263575.png" alt=""></a>
+    </div>
+  <!-- Header -->
+  <div class="bg-gradient-to-b from-sky-900 to-sky-800 text-white py-5 text-center">
+    <h1 class="text-4xl font-bold">BankEase</h1>
+    <p class="text-sm mt-2">We are here to help you 24/7</p>
+  </div>
+
+  <!-- Main Section -->
+  <div class="max-w-6xl mx-auto px-6 pb-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- Left: Contact Info -->
+    <div class="bg-sky-800   p-8">
+      <h2 class="text-2xl font-bold mb-3 text-blue-100">Get in Touch</h2>
+
+      <div class="text-gray-300 text-sm">
+        <p><span class="font-semibold">Address:</span> BankEase, Kochi, Kerala, India</p>
+        <p><span class="font-semibold">Phone:</span> +91 9876569989</p>
+        <p><span class="font-semibold">Email:</span><a href=""> customerservice@bankease.com </a> </p>
+      </div>
+
+      <div class="mt-6">
+        <iframe 
+          class="w-full h-60  shadow-md"
+          src="https://maps.google.com/maps?q=kochi&t=&z=13&ie=UTF8&iwloc=&output=embed">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="bg-sky-800   p-8">
+      <h2 class="text-2xl font-semibold mb-6 text-blue-100">Send Us a Message</h2>
+
+      <form class="space-y-5">
+
+        <div class="text-white">
+          <label class="block text-sm font-medium mb-1 text-white">Full Name</label>
+          <input  type="text" required placeholder="Enter your name"
+            class="w-full px-4 py-2 border border-white/50 focus:ring focus:ring-gray-50 outline-none">
+        </div>
+
+        <div class="text-white">
+          <label class="block text-sm font-medium mb-1 text-white">Email</label>
+          <input type="email" required placeholder="Enter your email"
+            class="w-full px-4 py-2 border border-white/50 focus:ring focus:ring-gray-50 outline-none">
+        </div>
+
+        <div class="text-white">
+          <label class="block text-sm font-medium mb-1 text-white">Message</label>
+          <textarea rows="4" required placeholder="Write your message..."
+            class="w-full px-4 py-2 border border-white/50 focus:ring focus:ring-gray-50 outline-none"></textarea>
+        </div>
+        <div class="flex w-full justify-center items-center">
+            <button 
+          type="submit"
+          class="w-1/2 rounded-sm bg-sky-700 text-white py-2 border-white/50 font-semibold hover:bg-sky-600 transition">
+          Send Message
+        </button></div>
+        
+      </form>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

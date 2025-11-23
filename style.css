@@ -6,7 +6,7 @@
   position: relative;
   width: 440px;
   height: 155px;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
   padding-bottom: 10px;
 }
@@ -18,9 +18,9 @@
   opacity: 0.6;
   left: 0;
   top: 0;
-  margin-left: -50%;
-  margin-top: -70%;
-  background: linear-gradient(744deg,#00fffb,#2100f7c2 60%,#00c0eb);
+  margin-left: -20%;
+  margin-top: -40%;
+  background: linear-gradient(90deg,#0072be,#00a6ff 60%,#dff5f7);
 }
 
 
@@ -53,16 +53,16 @@
 
 .playing .wave {
   border-radius: 40%;
-  animation: wave 3000ms infinite linear;
+  animation: wave 9000ms infinite linear;
 }
 
 .wave {
   border-radius: 40%;
-  animation: wave 55s infinite linear;
+  animation: wave 85s infinite linear;
 }
 
 .playing .wave:nth-child(2) {
-  animation-duration: 4000ms;
+  animation-duration: 6000ms;
 }
 
 .wave:nth-child(2) {
@@ -444,38 +444,6 @@ ul {
 }
 
 
-
-
-.form button {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #00000000;
-  color: #fff;
-  width: 8.5em;
-  height: 2.3em;
-  border: #369eff 0.2em solid;
-  border-radius: 11px;
-  transition: all 0.5s ease;
-}
-
-.form button:hover {
-  background-color: #369eff;
-}
-
-@keyframes anim {
-  0% {
-    transform: translateY(-70px);
-  }
-
-  50% {
-    transform: translateY(-19px);
-  }
-
-  100% {
-    transform: translateY(-70px);
-  }
-}
-
 /* From Uiverse.io by jack0237 */ 
 .loader {
   display: flex;
@@ -554,6 +522,9 @@ ul {
   height: 25px;
   pointer-events: none;
   border-radius: 7px;
+}
+.userhome{
+  background-color: white;
 }
 
 

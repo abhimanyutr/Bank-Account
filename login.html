@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<div class="flex flex-col-reverse md:flex-row justify-center items-center gap-10 px-10 bg-gray-800 ">
+<div class="flex flex-col-reverse md:flex-row justify-center items-center gap-10 px-10 bg-sky-900 ">
   <!-- Left -->
-  <div class="flex-1  flex-col items-center justify-center px-4 py-8 md:px-16 lg:px-32 text-center text-gray-300">
+  <div class="flex-1  flex-col items-center justify-center px-2 py-8 md:px-16 lg:px-32 text-center text-gray-300">
 
   <!-- Heading Section -->
   <div class="mb-8 flex flex-col justify-center">
@@ -26,16 +26,16 @@
   </div>
 
   <!-- Features Card -->
-  <div class="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sm:p-8">
+  <div class="w-full max-w-5xl bg-sky-900   rounded-lg  p-6 sm:p-8">
 
     <!-- First row -->
-    <div class="flex flex-col sm:flex-row gap-4 mb-4">
+    <div class="flex flex-col sm:flex-row gap-4 mb-4 w-100">
 
       
       
       <!-- Bank-Grade Security -->
-      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
-        <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full shadow-lg mr-4">
+      <a href="#" class="flex-1 text-white  flex items-center px-1 py-3 sm:justify-start justify-center transition">
+        <div class="w-12 h-12 flex items-center justify-center  rounded-full shadow-lg mr-4">
           <img class="w-8 h-8 rounded-full" src="https://getdrawings.com/free-icon-bw/shield-icon-png-4.png" alt="Security">
         </div>
         <div class="text-left">
@@ -45,8 +45,8 @@
       </a>
 
       <!-- Instant Transfers -->
-      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
-        <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full shadow-lg mr-4">
+      <a href="#" class="flex-1  text-white  flex items-center px-4 py-3 sm:justify-start justify-center transition">
+        <div class="w-12 h-12 flex items-center justify-center  rounded-full shadow-lg mr-4">
           <img class="w-8 h-8 rounded-full" src="https://www.pngall.com/wp-content/uploads/10/Charge-Silhouette-PNG-Image.png" alt="Transfers">
         </div>
         <div class="text-left">
@@ -63,7 +63,7 @@
     <div class="flex flex-col sm:flex-row gap-4">
       
       <!-- 24/7 Support -->
-      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
+      <a href="#" class="flex-1 text-white rounded-lg flex items-center px-1 py-3 sm:justify-start justify-center transition">
         <div class="w-12 h-12 flex items-center justify-center bg-transparent rounded-full shadow-lg mr-4">
           <img class="w-8 h-8 rounded-full" src="https://cdn4.iconfinder.com/data/icons/essentials-71/24/023_-_Clock-512.png" alt="Support">
         </div>
@@ -74,8 +74,8 @@
       </a>
 
       <!-- Global Reach -->
-      <a href="#" class="flex-1 bg-gray-800 hover:bg-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
-        <div class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full shadow-lg mr-4">
+      <a href="#" class="flex-1 text-white rounded-lg flex items-center px-4 py-3 sm:justify-start justify-center transition">
+        <div class="w-12 h-12 flex items-center justify-center  rounded-full shadow-lg mr-4">
           <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/309/309484.png" alt="Global">
         </div>
         <div class="text-left">
@@ -95,10 +95,10 @@
   <div class="flex w-full flex-col items-center justify-center min-h-screen px-4 py-8">
   
   <!-- Login Card -->
-  <div class="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-md">
+  <div class="bg-white border border-white/30 dark:bg-sky-900 p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-md">
     
     <!-- Title -->
-    <h2 class="text-2xl sm:text-3xl font-bold text-center text-blue-700 mb-6">🏦 Bank Account Login</h2>
+    <h2 class="text-2xl sm:text-2xl font-bold text-center text-sky-100 mb-6"> Bank Account Login</h2>
 
     <!-- Login Form -->
     <form action="/login" method="POST" class="space-y-5">
@@ -109,9 +109,8 @@
     Registered Email
   </label>
   <input type="email" id="email" name="email" 
-    placeholder="Enter your registered email"class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm 
-           focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 
-           p-3 dark:bg-gray-700 dark:text-white" 
+    placeholder="Enter your registered email"class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm  
+           p-3 dark:bg-gray-200 dark:text-black" 
     required
   >
 </div>
@@ -120,7 +119,7 @@
       <div>
         <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-200">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password"
-          class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3 dark:bg-gray-700 dark:text-white" required>
+          class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 p-3 dark:bg-gray-200 dark:text-black" required>
       </div>
 
       <!-- Remember Me + Forgot Password -->
@@ -129,7 +128,7 @@
           <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500">
           <span class="ml-2">Remember me</span>
         </label>
-        <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Forgot password?</a>
+        <a href="#" class="text-blue-600 dark:text-sky-600 hover:underline">Forgot password?</a>
 
         
 
@@ -137,7 +136,7 @@
 
       <!-- Login Button -->
       <button type="button" onclick="Verify()"
-        class="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white p-3 rounded-lg font-semibold shadow transition">
+        class="w-full bg-cyan-600 hover:bg-cyan-700 dark:bg-cyan-700 dark:hover:bg-cyan-600 text-white p-3 rounded-lg font-semibold shadow transition">
         Login
       </button>
     </form>
@@ -156,10 +155,7 @@
     </p>
   </div>
 
-   <button onclick="" 
-    class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700">
-    <i class="fa-solid fa-arrow-left text-lg"></i>
-  </button>
+  
 
 </div>
 

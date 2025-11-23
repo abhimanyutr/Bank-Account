@@ -15,96 +15,92 @@
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    
+    <!-- Sweet Alert -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
-<body>
+<body >
 
 
+<aside id="bank-sidebar" 
+class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+aria-label="Sidebar">
 
+  <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-100">
+    
+    <!-- User Section -->
+    <div class="mb-6 text-center ">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+           class="w-16 h-16 mx-auto rounded-full mb-2" />
+      <h2 id="sidebarWelcome" class="text-sm font-semibold text-gray-800 dark:text-black"></h2>
+      <p class="text-xs text-gray-500 text-center">Your Financial Guide</p>
+    </div>
 
+    <ul class="space-y-2 font-medium">
 
-<!-- <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-   <span class="sr-only">Open sidebar</span>
-   <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-   <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-   </svg>
-</button> -->
+    
 
-<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-      <ul class="space-y-2 font-medium">
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                  <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
-                  <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
-               </svg>
-               <span class="ms-3">Dashboard</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-                  <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-               <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
-               <span class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                  <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
-            </a>
-         </li>
-         <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"/>
-                  <path d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"/>
-                  <path d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"/>
-               </svg>
-               <span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
-            </a>
-         </li>
-      </ul>
-   </div>
+      <!-- Smart Spending -->
+      <li>
+        <a href="#" class="flex flex-col p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white">
+          <span class="text-sm font-semibold text-black  text-center">Smart Spending</span>
+          <p class="text-xs text-gray-600 dark:text-gray-400  text-center">
+            Track your expenses and avoid unnecessary purchases.  
+            Spend on needs first, wants later.
+          </p>
+        </a>
+      </li>
+
+      <!-- Emergency Fund -->
+      <li>
+        <a href="#" class="flex flex-col p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white">
+          <span class="text-sm font-semibold  text-center text-black">Emergency Fund</span>
+          <p class="text-xs text-gray-600 dark:text-gray-400  text-center">
+            Always keep 3–6 months of living expenses as savings.
+          </p>
+        </a>
+      </li>
+
+      <!-- Financial Tip -->
+      <li>
+        <a href="#" class="flex flex-col p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white">
+          <span class="text-sm font-semibold  text-center text-black"> Financial Tip</span>
+          <p class="text-xs text-gray-600 dark:text-gray-400  text-center">
+            Save at least 20% of your income every month for emergencies.
+          </p>
+        </a>
+      </li>
+      <li class="mt-4">
+  <div class="px-2 py-2 rounded-lg ">
+    <span class="text-sm font-semibold  text-center text-black"> Quick Actions</span>
+    
+    <ul class="mt-2 space-y-1 text-sm text-gray-700 dark:text-gray-950  text-center">
+      <li class="hover:text-gray-800 cursor-pointer"> Transfer Money</li>
+      <li class="hover:text-gray-800 cursor-pointer"> Pay Bills</li>
+      <li class="hover:text-gray-800 cursor-pointer"> Check Balance</li>
+      <li class="hover:text-gray-800 cursor-pointer"> Transaction History</li>
+    </ul>
+  </div>
+</li>
+
+      <!-- Logout -->
+      <li>
+        <a href="/index.html" class="flex items-center justify-center p-2 mt-4 text-red-600  hover:bg-gray-300 rounded-full">
+          <span class="ms-3  text-center">Logout</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
 </aside>
 
-<div class=" sm:ml-64">
+
+<div class=" sm:ml-64 userhome">
 
 
     <!-- Navbar -->
 
-<nav class="bg-white  border-gray-200 dark:bg-gray-900">
+<nav class="bg-white  border-gray-200 dark:bg-sky-950">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
             <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
@@ -113,33 +109,30 @@
         </a>
         
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-           <div> <h3 class="text-amber-500 transform transition-transform duration-300 hover:scale-105" id="navbarWelcome"></h3></div>
+            
+          </button>
+           <div class="flex justify-around items-center gap-2">
+            
+            <h3 class="text-amber-500 transform transition-transform duration-300 hover:scale-105" id="navbarWelcome"></h3>
+        
+          </div>
             
 
         </div>
     </div>
 </nav>
-<nav class="bg-gray-50 dark:bg-gray-700">
-    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl gap-5 p-4">
+<nav class="bg-gray-50 ">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl gap-5 ">
         <div class="flex items-center">
             <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-                <li>
-                    <a href="./index.html" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Company</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
-                </li>
-                <li>
-                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
-                </li>
+                <!-- <li>
+                    <a href="./index.html" class="text-gray-900 dark:text-black hover:underline" aria-current="page">Home</a>
+                </li> -->
             </ul>
         </div>
          <div id="depositResult" class="text-2xl text-green-400"> </div>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-         <h2 class="text-blue-500" id="accno"></h2>
+         <h2 class="text-blue-500 pr-4 pt-0.5" id="accno"></h2>
         </div>
     </div>
 </nav>
@@ -150,7 +143,7 @@
    <div class="p-4 rounded-lg dark:border-gray-700">
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-4">
   <!-- card1 -->
-  <div class="relative flex justify-between items-start p-4 rounded-xl bg-gray-50 dark:bg-gray-800 shadow-md transform transition-transform duration-300 hover:scale-105">
+  <div class="relative flex justify-between items-start p-4 rounded-xl bg-gray-50 dark:bg-sky-950 shadow-md transform transition-transform duration-300 hover:scale-105">
     <div>
       <div class="w-10 h-10 bg-orange-400 shadow-lg rounded-xl flex items-center justify-center">
         <i class="fa-solid fa-chart-simple text-white text-lg"></i>
@@ -174,7 +167,7 @@
   </div>
 
   <!-- card2 -->
-  <div class="relative flex justify-between items-start p-4 rounded-xl bg-gray-50 dark:bg-gray-800 shadow-md transform transition-transform duration-300 hover:scale-105">
+  <div class="relative flex justify-between items-start p-4 rounded-xl bg-gray-50 dark:bg-sky-950 shadow-md transform transition-transform duration-300 hover:scale-105">
     <div>
       <div class="w-10 h-10 bg-blue-400 shadow-lg rounded-xl flex items-center justify-center">
         <i class="fa-solid fa-piggy-bank text-white text-lg"></i>
@@ -198,7 +191,7 @@
   </div>
 
   <!-- card3 -->
-  <div class="relative flex justify-between items-start p-4 rounded-xl bg-gray-50 dark:bg-gray-800 shadow-md transform transition-transform duration-300 hover:scale-105">
+  <div class="relative flex justify-between items-start p-4 rounded-xl bg-gray-50 dark:bg-sky-950 shadow-md transform transition-transform duration-300 hover:scale-105">
     <div>
       <div class="w-10 h-10 bg-green-400 shadow-lg rounded-xl flex items-center justify-center">
         <i class="fa-solid fa-wallet text-white text-lg"></i>
@@ -224,12 +217,12 @@
 
 
 <!-- card Row 2 -->
-<div class="md:flex sm:block gap-4 mb-4 ">
+<div class="md:flex sm:block gap-4 mb-4 bg-white">
   <!-- Left: 70% -->
-  <div class="relative flex-[7] flex items-center justify-center sm:h-82 h-122 rounded-sm bg-blue-50 dark:bg-blue-200 md:mb-0 sm:mb-4">
+  <div class="relative flex-[7] flex items-center justify-center sm:h-82 h-122 rounded-sm  md:mb-0 sm:mb-4">
    
   <div class="absolute top-4 left-5">
-    <div class="flex flex-col text-gray-500 font-extrabold text-2xl">
+    <div class="flex flex-col text-gray-800 font-extrabold text-2xl">
       <h1>
         <i class="fa-solid fa-building-columns"></i> BankEase
       </h1>
@@ -239,9 +232,9 @@
 
  
   <div class="absolute top-2 right-3">
-      <div class="card_load_extreme_descripion flex justify-center item-center text-sm text-amber-800 font-bold">
+      <div class="card_load_extreme_descripion flex gap-1 justify-center item-center text-sm text-amber-900 font-bold">
          <h1>Account Number : </h1>
-         <h2 id="accno2"></h2>
+         <h2 id="accno2"> </h2>
       </div>
     
   </div>
@@ -251,11 +244,11 @@
   <div class="flex sm:flex-row flex-col w-full items-start px-5">
 
   <!-- Start (Left) -->
-  <div class="flex-1 flex  justify-start sm:pl-9 mb-3 sm:mb-0">
+  <div class="flex-1 flex  justify-start sm:pl-9 md:pl-2 mb-3 sm:mb-0">
     <div>
-      <h1 class="text-gray-500 font-semibold">Account Holder</h1>
-      <h1 class="text-gray-800 font-extrabold text-3xl" id="username"></h1>
-       <div class="flex"> <i class="fa-solid fa-envelope pt-1.5 pr-2 text-gray-400"></i>  <h1 id="useremail" class="text-gray-400"> </h1></div>  
+      <h1 class="text-gray-500 font-semibold italic">Account Holder</h1>
+      <h1 class="text-sky-800 font-extrabold text-3xl" id="username"></h1>
+       <div class="flex"> <i class="fa-solid fa-envelope pt-1.5 pr-2 text-gray-300 "></i>  <h1 id="useremail" class="text-gray-400 italic"> </h1></div>  
     </div>
   </div>
 
@@ -270,13 +263,7 @@
           
     <p> <span class="font-extrabold text-gray-700 text-lg pl-3">Account Balance:</span></p>
      <p> <span id="balanceText" class="ml-10 text-2xl text-gray-900 items-center">XX,XXX</span></p>
-     <P> <div class="loader pl-13">
-  <div class="dot"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
-  <div class="dot"></div>
-</div> </P>
+  
   </div>
    
     <svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -293,13 +280,8 @@
     <div>
       <h1 class="text-green-600 font-bold"><i class="fa-solid fa-circle text-green-400 "></i> Account Active</h1>
       <h1 class="text-gray-800 font-bold" ><i class="fa-solid fa-shield-halved text-green-800"></i> Verifiend</h1>
-      <button onclick="displayBalance()" type="button" class="my-1 font-bold text-white bg-[#2557D6] hover:bg-[#2557D6]/90 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none  rounded-lg text-sm  px-5 sm:py-2.5 p-1 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2 transform transition-transform duration-300 hover:scale-105">
-      <img 
-  class="border-0 rounded-full mr-4" 
-  src="https://cdn3d.iconscout.com/3d/premium/thumb/indian-rupee-3d-icon-png-download-7502556.png" 
-  alt="icon" 
-  width="30"
-/>
+      <button onclick="displayBalance()" type="button" class="my-1 font-bold text-white bg-sky-900 hover:bg-sky-800 focus:ring-4 focus:ring-[#2557D6]/50 focus:outline-none  rounded-lg text-sm  px-5 sm:py-2.5 p-1 text-center inline-flex items-center dark:focus:ring-[#2557D6]/50 me-2 mb-2 transform transition-transform duration-300 hover:scale-105">
+     
          Account Balance
 </button>
       
@@ -317,11 +299,11 @@
 
 
   <!-- Buttons -->
-<div class="flex flex-row justify-start gap-3 sm:gap-4 pr-7 md:ml-3">
+<div class="flex flex-row justify-start gap-3 sm:gap-4 pr-7 md:ml-1">
 
   <!-- Deposit -->
   <button type="button" data-modal-target="authentication-modal-deposit" data-modal-toggle="authentication-modal-deposit"
-    class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 transform transition-transform duration-300 hover:scale-105">
+    class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-sky-900 hover:bg-sky-950 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50  transform transition-transform duration-300 hover:scale-105">
     <img 
       class="border-0 rounded-full mr-2 sm:mr-4" 
       src="https://cdn-icons-png.freepik.com/256/6445/6445900.png" 
@@ -334,7 +316,7 @@
 
   <!-- Transaction History -->
   <button type="button"  data-modal-target="authentication-modal-history" data-modal-toggle="authentication-modal-history"
-    class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-[#050708] hover:bg-[#050708]/50 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 transform transition-transform duration-300 hover:scale-105">
+    class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-sky-900 hover:bg-sky-950  focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50 transform transition-transform duration-300 hover:scale-105">
     <img 
       class="border-0 rounded-full mr-2 sm:mr-4" 
       src="https://cdn-icons-png.flaticon.com/512/2867/2867944.png" 
@@ -347,7 +329,7 @@
 
   <!-- Withdrawal -->
   <button type="button" data-modal-target="authentication-modal-withdraw" data-modal-toggle="authentication-modal-withdraw"
-    class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 transform transition-transform duration-300 hover:scale-105">
+    class="w-full sm:w-auto h-10 sm:h-12 text-xs sm:text-sm text-white  bg-sky-900 hover:bg-sky-950  focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg px-3 sm:px-5 py-1.5 sm:py-2.5 flex items-center justify-center dark:focus:ring-[#050708]/50  transform transition-transform duration-300 hover:scale-105">
      <img 
       class="border-0 rounded-full mr-2 sm:mr-4" 
       src="https://cdn-icons-png.freepik.com/256/9652/9652666.png?semt=ais_white_label" 
@@ -357,35 +339,17 @@
     />
     Withdrawal
   </button>
-
 </div>
-
-
-
-
-  <!-- From Uiverse.io by themrsami --> 
-
-
-
 </div>
-
-
-
-
 </div>
-
-
-
-
-
 
 
   <!-- Right: 30% -->
-  <div class="flex-[3] flex items-center relative justify-center h-82  rounded-sm bg-gray-50 dark:bg-gray-800">
+  <div class="flex-[3] flex items-center relative justify-center h-82  rounded-sm bg-gray-50 dark:bg-gray-200">
     
     <div class="absolute top-2 w-full flex justify-between px-5">
-      <h1 class="text-md font-bold text-green-700">Recent Transactions</h1>
-      <button data-modal-target="authentication-modal-history" data-modal-toggle="authentication-modal-history"><h2 class="text-sm font-bold text-blue-500 pt-1"> View all</h2></button>
+      <h1 class="text-md font-bold text-black/60 italic">Recent Transactions</h1>
+      <button data-modal-target="authentication-modal-history" data-modal-toggle="authentication-modal-history"><h2 class="text-sm font-bold text-sky-900 pt-1"> View all</h2></button>
     </div>
     <div class="w-full px-6 pt-4" id="recent-transactions">
 
@@ -401,38 +365,98 @@
     
   </div>
 </div>
+<div class="w-full px-4 py-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+
+    <!-- Card 1 -->
+    <div class="w-full max-w-sm bg-white border border-gray-200 shadow-lg p-5 hover:shadow-2xl transition-all rounded-md">
+      <div class="flex items-center justify-center mb-3">
+        <h3 class="text-lg font-bold text-gray-900 text-center">Financial Tip</h3>
+      </div>
+
+      <p class="text-sm text-gray-900 mb-4 italic text-center">
+        Save at least <span class="font-semibold">20%</span> of your monthly income 
+        to build an emergency fund and avoid financial stress during unexpected situations.
+      </p>
+
+      <div class="flex justify-end">
+        <a href="">
+          <img class="w-5 h-5" src="https://www.shutterstock.com/image-vector/illustration-external-link-icon-button-260nw-2644893329.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="w-full max-w-sm bg-white border border-gray-200 shadow-lg p-5 hover:shadow-2xl transition-all rounded-md">
+      <div class="flex items-center justify-center mb-3">
+        <h3 class="text-lg font-bold text-gray-900 text-center">Emergency Fund</h3>
+      </div>
+
+      <p class="text-sm text-gray-900 italic mb-4 text-center">
+        Always keep savings equal to 
+        <span class="font-semibold">3–6 months</span> of your living expenses.
+        This helps you stay financially safe during emergencies like job loss or medical issues.
+      </p>
+
+      <div class="flex justify-end">
+        <a href="">
+          <img class="w-5 h-5" src="https://www.shutterstock.com/image-vector/illustration-external-link-icon-button-260nw-2644893329.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="w-full max-w-sm bg-white border border-gray-200 shadow-lg p-5 hover:shadow-2xl transition-all rounded-md">
+      <div class="flex items-center justify-center mb-3">
+        <h3 class="text-lg font-bold text-gray-900 text-center">Smart Spending</h3>
+      </div>
+
+      <p class="text-sm text-gray-900 mb-4 italic text-center">
+        Track your expenses and avoid unnecessary purchases.
+        Review your spending weekly to stay in control and build better saving habits.
+      </p>
+
+      <div class="flex justify-end">
+        <a href="">
+          <img class="w-5 h-5" src="https://www.shutterstock.com/image-vector/illustration-external-link-icon-button-260nw-2644893329.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
       
     <!-- cards -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
 
   <!-- Card 1 -->
-  <div class="rounded-sm bg-gray-50 h-38 dark:bg-gray-800 relative">
-    <h4 class="absolute left-3 top-1 text-blue-300 font-extrabold">Quick Actions</h4>
+  <div class="rounded-lg bg-gray-50 h-38 dark:bg-sky-950 relative">
+    <h4 class="absolute left-3 top-1 text-sky-50 font-extrabold">Quick Actions</h4>
     <div class="flex flex-wrap items-center justify-around mt-12 gap-2">
       <div>
-        <div class="w-10 h-10 bg-blue-400 shadow-lg rounded-xl ml-2 flex items-center justify-center">
+        <div class="w-10 h-10 bg-cyan-900 shadow-lg rounded-xl ml-2 flex items-center justify-center">
         <i class="fa-solid fa-share-from-square text-white text-lg"></i>
       </div>
       <h5 class="text-center text-gray-200 text-sm font-semibold">Transfer</h5>
     </div>
       
       <div>
-        <div class="w-10 h-10 bg-blue-400 shadow-lg rounded-xl ml-2 flex items-center justify-center">
+        <div class="w-10 h-10 bg-cyan-900 shadow-lg rounded-xl ml-2 flex items-center justify-center">
         <i class="fa-solid fa-book  text-white text-lg"></i>
       </div>
       <h5 class="text-center text-gray-200 text-sm font-semibold">Pay Bills</h5>
     </div>
 
       <div>
-        <div class="w-10 h-10 bg-blue-400 shadow-lg rounded-xl ml-2 flex items-center justify-center">
+        <div class="w-10 h-10 bg-cyan-900 shadow-lg rounded-xl ml-2 flex items-center justify-center">
         <i class="fa-solid fa-hand-point-up text-white text-lg"></i>
       </div>
       <h5 class="text-center text-gray-200 text-sm font-semibold">Request</h5>
     </div>
 
     <div>
-        <div class="w-10 h-10 bg-blue-400 shadow-lg rounded-xl ml-6 flex items-center justify-center">
+        <div class="w-10 h-10 bg-cyan-900 shadow-lg rounded-xl ml-6 flex items-center justify-center">
        <i class="fa-solid fa-building-columns text-white text-lg"></i>
       </div>
       <h5 class="text-center text-gray-200 text-sm font-semibold">Bank Details</h5>
@@ -443,7 +467,7 @@
 
   <!-- Card 2 -->
   <div class="flex items-center justify-center rounded-sm  bg-url['https://assets-v2.lottiefiles.com/a/44b0d654-1166-11ee-9689-07d92e0b68f4/tPwMEADW28.gif']">
-    <h4 class="absolute left-3 top-1 text-blue-300 font-extrabold">Quick Actions</h4>
+   
     
 
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
@@ -455,20 +479,13 @@
         </div>
         <!-- Item 2 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://img.freepik.com/premium-photo/businessman-interacts-with-virtual-banking-interface-using-touch-screen-technology-innovative_124865-96497.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="https://www.revechat.com/wp-content/uploads/2023/11/Digital-Banking-in-Bangladesh.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://cdn.dribbble.com/userupload/2918481/file/original-01f9ae0c138c194dd81ad5f0a59aaf13.png?resize=752x" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <img src="https://www.emarketer.com/topics/storage/42720ce1a76d41f1a52b9e2bbfe872d6/original_hero_image" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://www.brainvire.com/wp/wp-content/uploads/2021/04/Blog_Digitization-of-the-Banking-Industry-v2.gif" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://cdn.dribbble.com/userupload/40887010/file/original-81de4a56b2357a83530bfd8dae6969d5.png?resize=400x0" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
+        
     </div>
     <!-- Slider indicators -->
     <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -499,61 +516,13 @@
 
   </div>
 
-  <!-- Card 3 -->
-  <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-    <svg class="w-5 h-5 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-    </svg>
-  </div>
-
-  <!-- Card 4 -->
-  <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-    <svg class="w-5 h-5 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-    </svg>
-  </div>
-
 </div>
   
 
 
-      <div class="flex items-center justify-center h-48 mb-4 rounded-sm bg-gray-50 dark:bg-gray-800">
-         <p class="text-2xl text-gray-400 dark:text-gray-500">
-            <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-            </svg>
-         </p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-         <div class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800">
-            <p class="text-2xl text-gray-400 dark:text-gray-500">
-               <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
-               </svg>
-            </p>
-         </div>
-      </div>
+     
+
+     
    </div>
 </div>
 <!-- modal -->
@@ -580,8 +549,8 @@
     </div>
 </div> 
 
-<!-- Main modal History-->
-<div id="authentication-modal-history" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+<!-- Transaction modal History-->
+<div id="authentication-modal-history" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50  justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <!-- From Uiverse.io by vinodjangid07 -->
@@ -645,22 +614,22 @@
 <div id="progress-modal-deposit" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
   <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal Content -->
-<div class="p-4 md:p-5 bg-gray-700 rounded-lg ">
-    <svg class="w-10 h-10 text-gray-400 dark:text-gray-500 mb-4 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-        <path d="M8 5.625c4.418 0 8-1.063 8-2.375S12.418.875 8 .875 0 1.938 0 3.25s3.582 2.375 8 2.375Zm0 13.5c4.963 0 8-1.538 8-2.375v-4.019c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353c-.193.081-.394.158-.6.231l-.189.067c-2.04.628-4.165.936-6.3.911a20.601 20.601 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244c-.053-.028-.113-.053-.165-.082v4.019C0 17.587 3.037 19.125 8 19.125Zm7.09-12.709c-.193.081-.394.158-.6.231l-.189.067a20.6 20.6 0 0 1-6.3.911 20.6 20.6 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244C.112 6.035.052 6.01 0 5.981V10c0 .837 3.037 2.375 8 2.375s8-1.538 8-2.375V5.981c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353Z"/>
-    </svg>
+<div class="p-4 md:p-5 bg-sky-50 rounded-lg ">
+   <div class="flex justify-center items-center ">
+      <img class="w-12 h-12 rounded-full bg-sky-200" src="https://cdn-icons-png.flaticon.com/512/7337/7337975.png" alt="">
+    </div>
 
-    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">Deposit Amount</h3>
+    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-black text-center">Deposit Amount</h3>
 
     <!-- Input Field -->
     <div class="mb-6">
         <input type="number" id="depositAmount" placeholder="Enter amount"
-            class="w-full px-4 py-3 text-gray-900 dark:text-gray-100 bg-gray-800 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"/>
+            class="w-full px-4 py-3 text-gray-900 dark:text-gray-900 bg-gray-50 dark:bg-gray-50 border border-gray-300 dark:border-gray-600 rounded-lg transition-all"/>
     </div>
 
     <!-- Modal Footer Buttons -->
     <div class="flex justify-center gap-4">
-        <button type="button" onclick="caldeposit()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <button type="button" onclick="caldeposit()" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-900">
             Submit
         </button>
         <button type="button" data-modal-hide="progress-modal-deposit" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
@@ -677,7 +646,7 @@
   <div class="relative p-4 w-full max-w-md max-h-full">
       
         <!-- Modal Content -->
-<div class="p-4 md:p-5 bg-gray-700 rounded-lg ">
+<div class="p-4 md:p-5 bg-cyan-50 rounded-sm">
    <button onclick="closeModal('progress-modal-history')" data-tooltip-target="tooltip-dark" type="button"><div class="shrink-0 rounded-full p-0.5 ">
             <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/3545/3545314.png" alt="Neil image">
          </div></button>
@@ -687,18 +656,14 @@
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 
-    <svg class="w-10 h-10 text-gray-400 dark:text-gray-500 mb-4 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-        <path d="M8 5.625c4.418 0 8-1.063 8-2.375S12.418.875 8 .875 0 1.938 0 3.25s3.582 2.375 8 2.375Zm0 13.5c4.963 0 8-1.538 8-2.375v-4.019c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353c-.193.081-.394.158-.6.231l-.189.067c-2.04.628-4.165.936-6.3.911a20.601 20.601 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244c-.053-.028-.113-.053-.165-.082v4.019C0 17.587 3.037 19.125 8 19.125Zm7.09-12.709c-.193.081-.394.158-.6.231l-.189.067a20.6 20.6 0 0 1-6.3.911 20.6 20.6 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244C.112 6.035.052 6.01 0 5.981V10c0 .837 3.037 2.375 8 2.375s8-1.538 8-2.375V5.981c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353Z"/>
-    </svg>
-
-    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center">Transaction History</h3>
+    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-black text-center">Transaction History</h3>
     
     <!-- Input Field -->
     <div class="mb-6">
 
-      <div class="w-full px-6 pt-4" id="allTransactions">
+      <div class="w-full px-6 pt-4 bg-sky-100" id="allTransactions">
 
-        <ul class="w-full divide-y divide-gray-200 dark:divide-gray-700" id="transactionList">
+        <ul class="w-full divide-y divide-gray-200 dark:divide-gray-900" id="transactionList">
    
 </ul>
 
@@ -718,25 +683,25 @@
     <div class="relative p-4 w-full max-w-md max-h-full">
         <!-- Modal content -->
         <!-- Modal Content -->
-<div class="p-4 md:p-5 bg-gray-700 rounded-lg ">
-    <svg class="w-10 h-10 text-gray-400 dark:text-gray-500 mb-4 mx-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-        <path d="M8 5.625c4.418 0 8-1.063 8-2.375S12.418.875 8 .875 0 1.938 0 3.25s3.582 2.375 8 2.375Zm0 13.5c4.963 0 8-1.538 8-2.375v-4.019c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353c-.193.081-.394.158-.6.231l-.189.067c-2.04.628-4.165.936-6.3.911a20.601 20.601 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244c-.053-.028-.113-.053-.165-.082v4.019C0 17.587 3.037 19.125 8 19.125Zm7.09-12.709c-.193.081-.394.158-.6.231l-.189.067a20.6 20.6 0 0 1-6.3.911 20.6 20.6 0 0 1-6.3-.911l-.189-.067a10.719 10.719 0 0 1-.852-.34 8.08 8.08 0 0 1-.493-.244C.112 6.035.052 6.01 0 5.981V10c0 .837 3.037 2.375 8 2.375s8-1.538 8-2.375V5.981c-.052.029-.112.054-.165.082a8.08 8.08 0 0 1-.745.353Z"/>
-    </svg>
+<div class="p-4 md:p-5 bg-sky-50 rounded-lg ">
+    <div class="flex justify-center items-center ">
+      <img class="w-12 h-12 rounded-full bg-sky-200" src="https://cdn-icons-png.flaticon.com/512/5024/5024665.png" alt="">
+    </div>
 
-    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white text-center"> Withdraw Amount</h3>
+    <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-black text-center"> Withdraw Amount</h3>
 
     <!-- Input Field -->
     <div class="mb-6">
         <input type="number" id="AmountInput" placeholder="Enter amount"
-            class="w-full px-4 py-3 text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"/>
+            class="w-full px-4 py-3 text-gray-900 dark:text-gray-900 bg-gray-100 dark:bg-gray-50 border border-gray-300 dark:border-gray-600 rounded-lg  transition-all"/>
     </div>
 
     <!-- Modal Footer Buttons -->
     <div class="flex justify-center gap-4">
-        <button type="button" onclick="calWithdraw()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <button type="button" onclick="calWithdraw()" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-900">
             Submit
         </button>
-        <button type="button" data-modal-hide="progress-modal" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+        <button type="button" data-modal-hide="progress-modal" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-800">
             Cancel
         </button>
     </div>
@@ -750,7 +715,7 @@
         currentuser = localStorage.getItem("activeUser");
         console.log(currentuser);
         user = JSON.parse(localStorage.getItem(currentuser));
-       
+       sidebarWelcome.innerHTML =  `Welcome ${user.fullName} `;
         navbarWelcome.innerHTML = `Welcome ${user.fullName} `;
         accno.innerHTML=`Account Number : ${user.accno}`;
         accno2.innerHTML=`${user.accno}`;
@@ -761,7 +726,7 @@
 function allTransaction()
 {
 if (!user || !user.transaction || user.transaction.length === 0) {
-        document.getElementById("recent-transactions").innerHTML =` <div class=" flex items-center relative justify-center   rounded-sm ">
+        document.getElementById("recent-transactions").innerHTML =` <div class=" flex items-center relative justify-center  rounded-sm ">
 
           <p class="text-sm font-extrabold text-gray-900 truncate dark:text-white">
                No  transactions  yet.
@@ -776,18 +741,18 @@ if (!user || !user.transaction || user.transaction.length === 0) {
           
    transactionList.innerHTML = ""; // Clear old content
           recentTransactions.forEach(data=>{
-          txtColor = data.type==="Deposit" ? "text-green-500" : "text-red-600"
-          bgColor = data.type==="Deposit" ? "bg-green-500/20" : "bg-red-600/20"
-        const result = ` <li class="pb-3 sm:pb-4 ">
+          txtColor = data.type==="Deposit" ? "text-green-800" : "text-red-700"
+          bgColor = data.type==="Deposit" ? "bg-green-600/80" : "bg-red-700/60"
+        const result = ` <li class="pb-3 sm:pb-4 pt-2">
       <div class="flex  items-center justify-between space-x-4 rtl:space-x-reverse">
          <div class="shrink-0 rounded-full p-0.5 ${bgColor}">
             <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6321/6321913.png" alt="Neil image">
          </div>
          <div class="flex-1 min-w-0">
-            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+            <p class="text-sm font-medium  truncate ${txtColor}">
                ${data.type}
             </p>
-            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+            <p class="text-sm text-gray-500 truncate dark:text-gray-900">
                ${data.date}
             </p>
          </div>
@@ -822,17 +787,17 @@ function recentTransaction()
           listContainer.innerHTML = ""; // Clear old content
           recentTransactions.forEach(data=>{
           txtColor = data.type==="Deposit" ? "text-green-500" : "text-red-600"
-          bgColor = data.type==="Deposit" ? "bg-green-500/20" : "bg-red-600/20"
-        const result = ` <li class="pb-3 sm:pb-4 ">
+          bgColor = data.type==="Deposit" ? "bg-green-700/50" : "bg-red-600/40"
+        const result = ` <li class="pb-3 sm:pb-4 pt-1">
       <div class="flex  items-center justify-between space-x-4 rtl:space-x-reverse">
          <div class="shrink-0 rounded-full p-0.5 ${bgColor}">
             <img class="w-8 h-8 rounded-full" src="https://cdn-icons-png.flaticon.com/512/6321/6321913.png" alt="Neil image">
          </div>
          <div class="flex-1 min-w-0">
-            <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+            <p class="text-sm font-medium ${txtColor} truncate ">
                ${data.type}
             </p>
-            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+            <p class="text-sm text-gray-500 truncate dark:text-gray-900">
                ${data.date}
             </p>
          </div>
@@ -901,7 +866,7 @@ function pin(inputId){
         }); 
   }
   else if(inputId == "pin-History"){
-    console.log(" History myran");
+    console.log(" History ");
           
      // Show the modal
         const modal = document.getElementById('progress-modal-history');
@@ -979,10 +944,19 @@ function caldeposit() {
   
   // Save updated object back to localStorage
   localStorage.setItem(currentuser, JSON.stringify(user));
-  depositResult.innerHTML = `Amount Credited Successfully`;
+  
   console.log(`${amount} deposited successfully!`);
+  
    
-   setTimeout(()=>location.reload(),2000);
+   setTimeout(()=>location.reload(),1000);
+     swal({ icon: "success",
+  title: "Transaction Completed",
+  text: "Your amount has been credited",
+  timer: 1500,
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false});
+   
    recentTransaction();
    
   }
@@ -1020,10 +994,17 @@ function calWithdraw() {
     });
     localStorage.setItem(currentuser, JSON.stringify(user));
 
-    alert(`Withdraw Successful! New Balance: ${user.balance}`);
-
-    recentTransaction();
+    swal({
+    icon: "success",
+    title: "Withdrawal Successful",
+    text: `Your amount has been debited successfully.`,
+    timer: 2000,
+    showConfirmButton: false
+}).then(() => {
     location.reload();
+});
+    recentTransaction();
+   
 }
 
 
